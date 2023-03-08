@@ -1,0 +1,157 @@
+/*Trabajar en %*/
+/*Rangos de dispositivos*/
+
+/*Responsive para archivos: nav.php e index.php*/
+
+@media screen and (max-width: 430px){   
+
+    .contenedor-publicidad{
+        width: 50%;
+        margin: 0 auto;
+        height: 150px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        height: 250px;
+        overflow: hidden;
+        line-break: loose;
+    }
+}
+
+@media screen and (max-width: 660px){
+    body{
+        overflow-x: hidden;
+    }
+    
+    nav .nav-links{
+        display: none;
+    }
+
+    label{
+        display: block;
+    }
+
+    .contenedor-izquierda{
+        display: none;
+    }
+
+    .contenedor-derecha{
+        display: none;
+    }
+
+
+    .slider img{
+        height: 350px;
+    }
+
+
+    .barra{
+        width: 75%;
+    }
+
+
+    .contenedor-publicidad{
+        width: 65%;
+        margin: 0 auto;
+        height: 150px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        height: 250px;
+        overflow: hidden;
+        line-break: loose;
+    }
+
+    .contenedor-publicidad .contenedor-iconos{
+        width: 100%;
+        height: 200px;
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .contenedor-publicidad .contenedor-iconos .fa{
+        padding: 18px;
+        font-size: 30px;
+        width: 70px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        margin: 15px 5px;
+        color: rgb(255, 255, 255);
+    }    
+
+    .contenedor-final .contenedor-info{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+}
+
+
+@media screen and (max-width: 1500px) and (min-width: 1000px){   
+    body{
+        overflow-x: hidden;
+    }
+
+    nav .nav-links{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 800px){
+    
+    body{
+        overflow-x: hidden;
+    }
+
+    nav .nav-links{
+        width: 40%;
+    }
+
+    .contenedor-arriba .contenedor-izquierda{
+        width: 60%;
+    }
+
+    .contenedor-arriba .contenedor-derecha{
+        width: 40%;
+
+    } 
+    
+}
+
+
+
+@media screen and (max-width: 800px) {
+    
+    body{
+        overflow-x: hidden;
+    }
+    
+    nav .nav-links{
+        width: 45%;
+    }
+    
+    .contenedor-arriba .contenedor-izquierda{
+        width: 65%;
+    }
+
+    .contenedor-arriba .contenedor-derecha{
+        width: 49%;
+
+    } 
+
+    .contenedor-arriba .contenedor-izquierda .far{
+        padding-left: 20px;
+    }
+}
+
+
+/*Responsive para cards*/
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+}

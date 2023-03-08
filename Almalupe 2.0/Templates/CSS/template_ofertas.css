@@ -1,0 +1,95 @@
+.contenedor-productos{
+    width: 250px;
+    height: 430px;
+    box-shadow: 0 9px 7px #dfdfdf;    
+    display: inline-block;
+    font-family: var(--font-family-secundario2);
+    margin-bottom: 60px;
+}
+
+.contenedor-productos .parte-arriba{
+    width: 100%;
+    height: 200px;
+    background: #ccc;
+    text-align: center;
+}
+
+.contenedor-productos .parte-arriba img{
+    height: 200px;
+}
+
+.contenedor-productos .parte-abajo{
+    width: 100%;
+    height: 210px;
+    background: rgb(255, 255, 255); 
+}
+
+.contenedor-productos .parte-abajo .row-1, .contenedor-productos .parte-abajo .row-2, .contenedor-productos .parte-abajo .row-3, .contenedor-productos .parte-abajo .row-4, .contenedor-productos .parte-abajo .row-5{
+    margin: 0 30px;
+    display: block;
+}
+
+.contenedor-productos .parte-abajo .row-1{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+    padding-top: 20px;
+}
+
+.contenedor-productos .parte-abajo .row-2{
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contenedor-productos .parte-abajo .row-2:hover{
+    color: #fbb72c;
+}
+
+.contenedor-productos .parte-abajo .row-3{
+    font-size: 15px;
+    line-height: 22px;
+    color: #999;
+    margin-bottom: 18px;
+}
+
+.contenedor-productos .parte-abajo .row-4{
+    background: #ccc;
+    height: 1px;
+    margin-bottom: 18px;
+}
+
+.contenedor-productos .parte-abajo .row-5{
+    display: inline-block;
+}
+
+.contenedor-productos .parte-abajo .row-5 span{
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+.contenedor-productos .parte-abajo .row-5 .iconos{
+    display: inline-block;
+    height: 20px;
+    margin-left: 160px;
+}
+
+.contenedor-productos .parte-abajo .row-5 .iconos .fa{
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.contenedor-productos .parte-abajo .row-5 .iconos .fa:hover{
+color: #fbb72c;
+}

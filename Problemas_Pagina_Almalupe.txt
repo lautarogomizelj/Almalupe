@@ -1,0 +1,18 @@
+Problemas & Ideas con pagina Almalupe
+
+-cambiar diseño de header 
+-cambiar diseño de footer
+-cambiar color predeterminado en toda la pagina [rgb(93, 73, 84)]
+-cambiar fotos del slider
+-cambiar diseño de producto
+-modificar estilo de foto en pagina "contacto"
+
+-cambiar fondo en "inicio de sesion" (me gusta pero es muy oscuro)
+-en pagina "inicio de sesion" y "crear cuenta" añadir en input contraseña un boton para ver/ocultar contraseña
+
+
+Problemas con nuevo diseño de header
+
+-cambiar nombre "Mariana Paniagua" arriba a la izquierda
+-crear dropdown menu bajo nombre de "mi cuenta" y poner "iniciar sesion" y "crear cuenta"
+-por ahora sacar boton de "¿quienes somos?

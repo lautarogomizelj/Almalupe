@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.contenedor-fondo #fondo1{
+    width: 100%;
+    height: 35vh;
+    filter: blur(4px);
+    z-index: -10;
+}
+
+.contenedor-fondo .texto{
+    position: absolute;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 30px;
+    top: 25%;
+    left: 35%;
+
+}   
+
+
+.contenedor-ayuda{
+    background: violet;
+    width: 60%;
+    height: 45vh;
+    margin: 80px auto;
+    display: flex;
+}
+
+.contenedor-ayuda .columna1{
+    background: #495c6a;
+    width: 35%;
+}
+
+.contenedor-ayuda .columna1 div{
+    height: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contenedor-ayuda .columna1 div span{
+    color: white;
+    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+    margin-left: 15%;
+    font-weight: 600;
+
+}
+
+.contenedor-ayuda .columna1 div .fas, .contenedor-ayuda .columna1 div .far{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+
+.contenedor-ayuda .columna1 .row-1{
+    margin-top: 80px;
+}
+
+.contenedor-ayuda .columna1 .row-2 span{
+    margin-left: 20%;
+}
+
+.contenedor-ayuda .columna1 .row-3{
+    margin-bottom: 40px;
+}
+
+.contenedor-ayuda .columna1 .barra-1{
+    width: 80%;
+    margin: 0 auto;
+    height: 1px;
+    border-bottom: 1px solid white;
+    margin-bottom: 50px;
+}
+
+.contenedor-ayuda .columna1 .row-4{
+    height: 30px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contenedor-ayuda .columna1 .row-4 .fa{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    outline: none;
+    margin: 0 20px;
+}
+
+
+
+.contenedor-ayuda .columna1 .row-4 .fa:hover{
+    opacity: .5;
+    transition: all .4s;
+}
+
+/*-------------------------------------------*/
+
+.contenedor-ayuda .columna2{
+    background: #91A8B8;
+    width: 65%;
+}
+
+.contenedor-ayuda .columna2 .row1{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.contenedor-ayuda .columna2 .row1 span{
+    font-size: 26px;
+    color: #495c6a;
+    font-weight: 900;
+    font-family: 'Mulish', sans-serif;
+}
+
+
+.contenedor-ayuda .columna2 form [type="text"]{
+    background: #eef3fa;
+    width: 80%;
+    height: 35px;
+    margin-left: 40px;
+    outline: none;
+    color: #495c6a;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    font-family: 'Mulish', sans-serif;
+    display: block;
+}
+
+.contenedor-ayuda .columna2 form [type="text"]::placeholder{
+    font-size: 14px;
+    color: #495c6a;
+}
+
+.contenedor-ayuda .columna2 form textarea{
+    width: 80%;
+    font-family: 'Mulish', sans-serif;
+    background: #eef3fa;
+    border: none;
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-top: 15px;
+    color: #495c6a;
+    margin-left: 40px;
+    outline: none;
+    font-size: 14px;
+    padding-right: 15px;
+    resize: none;
+    display: block;
+    height: 120px;
+}
+
+.contenedor-ayuda .columna2 form textarea::placeholder{
+    font-size: 14px;
+    color: #495c6a;
+}
+
+.contenedor-ayuda .columna2 .row2{
+    width: 80%;
+    margin-left: 40px;
+    height: 100px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contenedor-ayuda .columna2 form .row2 button{
+    border: none;
+    outline: none;
+    border-radius: 1px;
+    width: 150px;
+    height: 50px;
+    background: #0286bf;
+    cursor: pointer;
+
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.contenedor-ayuda .columna2 form button:hover{
+    opacity: .8;
+}
+
+/*-------------------*/
+
+
+ 
+@media screen and (max-width: 660px){
+    body{
+        background: red;
+    }
+
+    nav .nav-links{
+        display: none;
+    }
+
+    label{
+        display: block;
+    }
+
+    .contenedor-izquierda{
+        display: none;
+    }
+
+    .contenedor-derecha{
+        display: none;
+    }
+    
+}
+

@@ -1,0 +1,18 @@
+.contenedor-final{
+    width: 100%;
+    height: 50px;
+    background: var(--div-background-color);
+}
+
+.contenedor-final .contenedor-info{
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contenedor-final .contenedor-info p{
+    font-size: 16px;
+    color: black;
+    padding-top: 15px;
+}
