@@ -160,22 +160,31 @@
     }
 
     function moveToNextItem() {
+        clearInterval(interval)
+        
         if (currentItem < items.length - itemsPerPage) {
             currentItem += itemsPerPage;
         } else {
             currentItem = 0;
         }
         updateCarousel();
+
+        interval = setInterval(moveToNextItem, 4000)
     }
 
     function moveToPrevItem() {
+        clearInterval(interval)
+
         if (currentItem > 0) {
             currentItem -= itemsPerPage;
         } else {
             currentItem = items.length - itemsPerPage;
         }
         updateCarousel();
+
+        interval = setInterval(moveToNextItem, 4000)
     }
+
 
     let prevButton = document.querySelector('.carousel-prev');
     let nextButton = document.querySelector('.carousel-next');
@@ -184,4 +193,9 @@
     nextButton.addEventListener('click', moveToNextItem);
 
     window.addEventListener('resize', updateCarousel);
+    
+
+    //haciendo el codigo para que se mueva automaticamente
+
+    interval = setInterval(moveToNextItem, 4000)
 </script>
