@@ -146,28 +146,35 @@
     let items = document.querySelectorAll('.carousel-item');
     let currentItem = 0;
     const itemsPerPage = 4;
-    const itemWidth = items[0].getBoundingClientRect().width + parseInt(window.getComputedStyle(items[0]).marginRight);
+    let itemWidth = calculateItemWidth();
+
+    function calculateItemWidth() {
+        return items[0].getBoundingClientRect().width + parseInt(window.getComputedStyle(items[0]).marginRight);
+    }
+
+    function updateCarousel() {
+        itemWidth = calculateItemWidth();
+        items.forEach((item, index) => {
+            item.style.transform = `translateX(-${currentItem * itemWidth}px)`;
+        });
+    }
 
     function moveToNextItem() {
-    if (currentItem < items.length - itemsPerPage) {
-        currentItem += itemsPerPage;
-    } else {
-        currentItem = 0;
-    }
-    items.forEach((item, index) => {
-        item.style.transform = `translateX(-${currentItem * itemWidth}px)`;
-    });
+        if (currentItem < items.length - itemsPerPage) {
+            currentItem += itemsPerPage;
+        } else {
+            currentItem = 0;
+        }
+        updateCarousel();
     }
 
     function moveToPrevItem() {
-    if (currentItem > 0) {
-        currentItem -= itemsPerPage;
-    } else {
-        currentItem = items.length - itemsPerPage;
-    }
-    items.forEach((item, index) => {
-        item.style.transform = `translateX(-${currentItem * itemWidth}px)`;
-    });
+        if (currentItem > 0) {
+            currentItem -= itemsPerPage;
+        } else {
+            currentItem = items.length - itemsPerPage;
+        }
+        updateCarousel();
     }
 
     let prevButton = document.querySelector('.carousel-prev');
@@ -176,4 +183,5 @@
     prevButton.addEventListener('click', moveToPrevItem);
     nextButton.addEventListener('click', moveToNextItem);
 
+    window.addEventListener('resize', updateCarousel);
 </script>
