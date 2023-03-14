@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .carousel-container {
+                position: relative;
+                width: 100%;
+                max-width: 860px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            .carousel {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+
+            .carousel-item {
+                flex: 0 0 24%;
+                margin-right: 10px;
+                text-align: center;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .carousel-item:last-of-type {
+                margin-right: 0;
+            }
+
+            .carousel-item img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .carousel-buttons {
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .carousel-prev,
+            .carousel-next {
+                background-color: #ccc;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                margin-right: 10px;
+                padding: 5px 10px;
+            }
+
+            .carousel-prev:hover,
+            .carousel-next:hover {
+                background-color: #aaa;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>0 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>1 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>2 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>3 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>4 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>5 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>6 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>7 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>8 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>9 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>10 lorem ipsum random text...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="1.jpeg">
+                    <div class="carousel-item-description">
+                        <p>11 lorem ipsum random text...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <button class="carousel-prev">Anterior</button>
+                <button class="carousel-next">Siguiente</button>
+            </div>
+          </div>          
+    </body>
+</html>
+<script>
+    let items = document.querySelectorAll('.carousel-item');
+    let currentItem = 0;
+    const itemsPerPage = 4;
+    let itemWidth = calculateItemWidth();
+
+    function calculateItemWidth() {
+        return items[0].getBoundingClientRect().width + parseInt(window.getComputedStyle(items[0]).marginRight);
+    }
+
+    function updateCarousel() {
+        itemWidth = calculateItemWidth();
+        items.forEach((item, index) => {
+            item.style.transform = `translateX(-${currentItem * itemWidth}px)`;
+        });
+    }
+
+    function moveToNextItem() {
+        clearInterval(interval)
+        
+        if (currentItem < items.length - itemsPerPage) {
+            currentItem += itemsPerPage;
+        } else {
+            currentItem = 0;
+        }
+        updateCarousel();
+
+        interval = setInterval(moveToNextItem, 4000)
+    }
+
+    function moveToPrevItem() {
+        clearInterval(interval)
+
+        if (currentItem > 0) {
+            currentItem -= itemsPerPage;
+        } else {
+            currentItem = items.length - itemsPerPage;
+        }
+        updateCarousel();
+
+        interval = setInterval(moveToNextItem, 4000)
+    }
+
+
+    let prevButton = document.querySelector('.carousel-prev');
+    let nextButton = document.querySelector('.carousel-next');
+
+    prevButton.addEventListener('click', moveToPrevItem);
+    nextButton.addEventListener('click', moveToNextItem);
+
+    window.addEventListener('resize', updateCarousel);
+    
+
+    //haciendo el codigo para que se mueva automaticamente
+
+    interval = setInterval(moveToNextItem, 4000)
+</script>

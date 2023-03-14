@@ -134,7 +134,7 @@ h3{
     padding: 23px 24px;
     
     position: absolute;
-    left: -5px;
+    left: -3px;
     top: -1px;
     z-index: 1;
 }
@@ -212,32 +212,53 @@ h3{
 /*------------------------------*/
 
 .contenedor .seccion.abajo{
-    /* height: 20%; */
     height: 58px;
     width: 100vw;
     z-index: 1;
     background-color: var(--div-background-color);
-    /* background-color: red; */
-    /* position: fixed; */
-    /* position: sticky; */
+
+    display: flex;
+    justify-content: center;
+
 }
 .contenedor .seccion.abajo .nav-links{
     display: flex;
     justify-content: space-around;
-    width: 32vw;
+    position: relative;
+    /* width: 32vw; */
+    width: 500px;
     height: 100%;
     padding: 20px 0;
-
+/* 
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);*/
+
 }
 .contenedor .seccion.abajo .nav-links li{
     list-style-type: none;
     cursor: pointer;
-    height: 37px;
+    height: max-content;
+    position: relative;
 }
+
+.contenedor .seccion.abajo .nav-links li::after {
+    content: "";
+    height: 2.3px;
+    width: 0;
+    background: #ffff;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+}
+
+.contenedor .seccion.abajo .nav-links li:hover::after {
+    width: 100%;
+}
+  
+
 .contenedor .seccion.abajo .nav-links li a{
     text-decoration: none;
 }
@@ -267,7 +288,7 @@ h3{
 
     background: transparent;
     position: absolute;
-    left: -13px;
+    left: -15px;
     top: 0px;
     border-radius: 50%;
     border: 4px solid rgb(139, 75, 182);
@@ -276,44 +297,57 @@ h3{
 
 /*--------------------------------------*/
 
-
-.contenedorFoto{
-    border-radius: 2px;
-
-    height: 30rem;
-    width: 100%;
-    text-align: center;
-    
+.carousel-container {
     position: relative;
+    width: 100%;
+    max-width: 860px;
+    margin: 5vw auto 0;
     overflow: hidden;
+
+    background-color: red;
 }
 
-.contenedorFoto img{
-    border-radius: 2px;
-    height: fit-content;
-    position: absolute;
-    left: 50%;
-    top: 80%;
-    transform: translate(-50%,-50%);
-} 
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    
 
-
-.carousel-item:nth-child(2), .carousel-item:nth-child(3){
-    filter: grayscale(5%);
+    background-color: green;
 }
 
-#carouselExampleControls{
-    width: 50%;
-    height: 30rem;
-    border-radius: 2px;
+.carousel-item {
+    flex: 0 0 24%;
+    margin-right: 10px;
+    text-align: center;
+    transition: transform .5s ease-in-out;
 }
 
-.contenedorCarouselFotos{
-    position: relative;
-    width: 100%;
-    height: max-content;
+.carousel-item:last-of-type {
+    margin-right: 0;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-buttons {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
-    background-color: aqua;
+    margin-top: 10px;
+}
+
+.carousel-prev,
+.carousel-next {
+    background-color: #ccc;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: #aaa;
 }
