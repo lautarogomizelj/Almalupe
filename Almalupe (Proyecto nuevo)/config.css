@@ -12,11 +12,16 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 :root{
     --text-color:#5d4954;
     /* --div-background-color: rgb(93, 73, 84); */
     /* --div-background-color: #6c546d; */
-    --div-background-color: #cc99d1a4;
+    /* --div-background-color: #cc99d1a4; */
+    --div-background-color: #835886ad;
     --font-family-principal: 'Mulish', sans-imimserif;
     --font-family-secundario1: 'Abel', sans-serif;
     --font-family-secundario2: 'Roboto', sans-serif;
