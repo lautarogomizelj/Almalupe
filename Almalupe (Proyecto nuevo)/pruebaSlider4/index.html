@@ -59,7 +59,7 @@
 
             @media only screen and (max-width: 500px) {
                 .carousel-item {
-                    flex: 0 0 23%;
+                    flex: 0 0 48%;
                 }
             }
 
@@ -324,8 +324,10 @@
 <script>
     let items = document.querySelectorAll('.carousel-item');
     let currentItem = 0;
-    const itemsPerPage = 4;
+    const itemsPerPage = window.screen.availWidth >= '500px' ? 4 : 2;
     let itemWidth = calculateItemWidth();
+
+    console.log(calculateItemWidth)
 
     function calculateItemWidth() {
         return items[0].getBoundingClientRect().width + parseInt(window.getComputedStyle(items[0]).marginRight);
