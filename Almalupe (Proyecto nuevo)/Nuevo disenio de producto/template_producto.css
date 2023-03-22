@@ -24,13 +24,14 @@ body{
     box-shadow: 0 9px 7px #dfdfdf;    
     font-family: var(--font-family-secundario2);
     display: inline-block;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
     transition: height 300ms;
 }
 
 .contenedorProducto:hover{
     box-shadow: 0 9px 7px #b3b1b1;  
 }
+
 
 /* --------------------------------------------- parte arriba --------------------------------------------- */
 
@@ -44,6 +45,8 @@ body{
 }
 
 .contenedorProducto .parteArriba img{
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
     width: 100%;
 }
@@ -85,6 +88,7 @@ body{
     display: block;
     position: relative;
 }
+
 
 /* ----------------------- Row 1 (categoria)----------------------- */
 .contenedorProducto .parteAbajo .row-1{

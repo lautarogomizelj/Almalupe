@@ -5,12 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./template_producto_slider.css">
+        <script src="https://kit.fontawesome.com/1ff8ebd91d.js"></script>
+        <link rel="stylesheet" href="../Nuevo disenio de producto/template_producto.css">
         <title>Document</title>
         <style>
             .carousel-container {
                 position: relative;
                 width: 100%;
-                max-width: 860px;
+                max-width: 930px;
                 margin: 0 auto;
                 overflow: hidden;
             }
@@ -20,21 +22,31 @@
                 flex-wrap: nowrap;
             }
 
-            .carousel-item {
+            .contenedorProducto {
+                width: 19rem;
+                height: 20rem;
                 flex: 0 0 24%;
                 margin-right: 10px;
                 text-align: center;
-                transition: transform 0.3s ease-in-out;
+                transition: transform 0.5s, height 300ms;
             }
 
-            .carousel-item:last-of-type {
+            .contenedorProducto:last-of-type {
                 margin-right: 0;
             }
 
-            .carousel-item img {
-                max-width: 100%;
-                height: auto;
+            .contenedorProducto .parteAbajo .row-1 {
+                margin-top: 10px;
             }
+
+            .contenedorProducto .parteAbajo .row-3 {
+                margin-top: 25px;
+            }
+
+            .contenedorProducto .parteAbajo .row-4 {
+                margin-bottom: 15px;
+            }
+
 
             .carousel-buttons {
                 display: flex;
@@ -57,8 +69,14 @@
                 background-color: #aaa;
             }
 
-            @media only screen and (max-width: 500px) {
-                .carousel-item {
+            @media only screen and (max-width: 850px) {
+                .contenedorProducto {
+                    flex: 0 0 32%;
+                }
+            }
+
+            @media only screen and (max-width: 620px) {
+                .contenedorProducto {
                     flex: 0 0 48%;
                 }
             }
@@ -68,252 +86,107 @@
     <body>
         <div class="carousel-container">
             <div class="carousel">
-                <div class="carousel-item">
-                    <div class="parte-arriba">
-                        <img src="cartera1.jpg" alt="">
+                <div class="contenedorProducto">
+                    <div class="parteArriba">
+                        <div class="btnIcono">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+        
+                        <img src="../1.jpeg" alt="asdflk" title="Ca">
                     </div>
-                
-                    <div class="parte-abajo">
+                    <div class="parteAbajo">
                         <div class="row-1">
-                            <span>Accesorios, Cartera</span>
+                            <span>Remeras</span>
                         </div>
                 
                         <div class="row-2">
-                            <span>Cartera de Cuero</span>
+                            <span>Remera "Los Angeles"</span>
                         </div>
                 
-                        <div class="row-3">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</span>
-                        </div>
+                        <div class="row-3"></div>
                 
-                        <div class="row-4"></div>
-                
-                        <div class="row-5">
-                            <span>$2500</span>
-                
-                            <div class="iconos">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </div>
+                        <div class="row-4">
+                            <span>$3000</span>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="parte-arriba">
-                        <img src="cartera1.jpg" alt="">
+                <div class="contenedorProducto">
+                    <div class="parteArriba">
+                        <div class="btnIcono">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+        
+                        <img src="../1.jpeg" alt="asdflk" title="Ca">
                     </div>
-                
-                    <div class="parte-abajo">
+                    <div class="parteAbajo">
                         <div class="row-1">
-                            <span>Accesorios, Cartera</span>
+                            <span>Remeras</span>
                         </div>
                 
                         <div class="row-2">
-                            <span>Cartera de Cuero</span>
+                            <span>Remera "Los Angeles"</span>
                         </div>
                 
-                        <div class="row-3">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</span>
-                        </div>
+                        <div class="row-3"></div>
                 
-                        <div class="row-4"></div>
-                
-                        <div class="row-5">
-                            <span>$2500</span>
-                
-                            <div class="iconos">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </div>
+                        <div class="row-4">
+                            <span>$3000</span>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="parte-arriba">
-                        <img src="cartera1.jpg" alt="">
+                <div class="contenedorProducto">
+                    <div class="parteArriba">
+                        <div class="btnIcono">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+        
+                        <img src="../1.jpeg" alt="asdflk" title="Ca">
                     </div>
-                
-                    <div class="parte-abajo">
+                    <div class="parteAbajo">
                         <div class="row-1">
-                            <span>Accesorios, Cartera</span>
+                            <span>Remeras</span>
                         </div>
                 
                         <div class="row-2">
-                            <span>Cartera de Cuero</span>
+                            <span>Remera "Los Angeles"</span>
                         </div>
                 
-                        <div class="row-3">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</span>
-                        </div>
+                        <div class="row-3"></div>
                 
-                        <div class="row-4"></div>
-                
-                        <div class="row-5">
-                            <span>$2500</span>
-                
-                            <div class="iconos">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </div>
+                        <div class="row-4">
+                            <span>$3000</span>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="parte-arriba">
-                        <img src="cartera1.jpg" alt="">
+                <div class="contenedorProducto">
+                    <div class="parteArriba">
+                        <div class="btnIcono">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+        
+                        <img src="../1.jpeg" alt="asdflk" title="Ca">
                     </div>
-                
-                    <div class="parte-abajo">
+                    <div class="parteAbajo">
                         <div class="row-1">
-                            <span>Accesorios, Cartera</span>
+                            <span>Remeras</span>
                         </div>
                 
                         <div class="row-2">
-                            <span>Cartera de Cuero</span>
+                            <span>Remera "Los Angeles"</span>
                         </div>
                 
-                        <div class="row-3">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</span>
-                        </div>
+                        <div class="row-3"></div>
                 
-                        <div class="row-4"></div>
-                
-                        <div class="row-5">
-                            <span>$2500</span>
-                
-                            <div class="iconos">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </div>
+                        <div class="row-4">
+                            <span>$3000</span>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="parte-arriba">
-                        <img src="cartera1.jpg" alt="">
-                    </div>
-                
-                    <div class="parte-abajo">
-                        <div class="row-1">
-                            <span>Accesorios, Cartera</span>
-                        </div>
-                
-                        <div class="row-2">
-                            <span>Cartera de Cuero</span>
-                        </div>
-                
-                        <div class="row-3">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</span>
-                        </div>
-                
-                        <div class="row-4"></div>
-                
-                        <div class="row-5">
-                            <span>$2500</span>
-                
-                            <div class="iconos">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="parte-arriba">
-                        <img src="cartera1.jpg" alt="">
-                    </div>
-                
-                    <div class="parte-abajo">
-                        <div class="row-1">
-                            <span>Accesorios, Cartera</span>
-                        </div>
-                
-                        <div class="row-2">
-                            <span>Cartera de Cuero</span>
-                        </div>
-                
-                        <div class="row-3">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</span>
-                        </div>
-                
-                        <div class="row-4"></div>
-                
-                        <div class="row-5">
-                            <span>$2500</span>
-                
-                            <div class="iconos">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="parte-arriba">
-                        <img src="cartera1.jpg" alt="">
-                    </div>
-                
-                    <div class="parte-abajo">
-                        <div class="row-1">
-                            <span>Accesorios, Cartera</span>
-                        </div>
-                
-                        <div class="row-2">
-                            <span>Cartera de Cuero</span>
-                        </div>
-                
-                        <div class="row-3">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</span>
-                        </div>
-                
-                        <div class="row-4"></div>
-                
-                        <div class="row-5">
-                            <span>$2500</span>
-                
-                            <div class="iconos">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="parte-arriba">
-                        <img src="cartera1.jpg" alt="">
-                    </div>
-                
-                    <div class="parte-abajo">
-                        <div class="row-1">
-                            <span>Accesorios, Cartera</span>
-                        </div>
-                
-                        <div class="row-2">
-                            <span>Cartera de Cuero</span>
-                        </div>
-                
-                        <div class="row-3">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</span>
-                        </div>
-                
-                        <div class="row-4"></div>
-                
-                        <div class="row-5">
-                            <span>$2500</span>
-                
-                            <div class="iconos">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
 
 
 
             </div>
+            
             <div class="carousel-buttons">
                 <button class="carousel-prev">Anterior</button>
                 <button class="carousel-next">Siguiente</button>
@@ -322,12 +195,11 @@
     </body>
 </html>
 <script>
-    let items = document.querySelectorAll('.carousel-item');
+    let items = document.querySelectorAll('.contenedorProducto');
     let currentItem = 0;
     const itemsPerPage = 4;
     let itemWidth = calculateItemWidth();
 
-    console.log(calculateItemWidth)
 
     function calculateItemWidth() {
         return items[0].getBoundingClientRect().width + parseInt(window.getComputedStyle(items[0]).marginRight);
@@ -379,4 +251,35 @@
     //haciendo el codigo para que se mueva automaticamente
 
     interval = setInterval(moveToNextItem, 4000)
+
+    // Estilo producto
+
+    let contenedor = document.querySelector(".contenedorProducto")
+
+    let parteArriba = contenedor.childNodes[1]
+    let btnIcono = parteArriba.childNodes[1]
+
+    let parteAbajo = contenedor.childNodes[3]
+
+
+    contenedor.addEventListener("mouseover", function(){
+        parteAbajo.style.height = "26%"
+        parteAbajo.style.opacity = "1"
+
+        parteArriba.style.height = "74%"
+        btnIcono.style.opacity = "1"
+
+        contenedor.style.height = "28rem"
+    });
+
+    contenedor.addEventListener("mouseleave", function(){
+        parteAbajo.style.height = "0%"
+        parteAbajo.style.opacity = "0"
+        
+        parteArriba.style.height = "100%"
+        btnIcono.style.opacity = "0"
+        
+        contenedor.style.height = "20rem"
+    });
+
 </script>
