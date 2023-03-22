@@ -24,7 +24,7 @@ body{
     box-shadow: 0 9px 7px #dfdfdf;    
     font-family: var(--font-family-secundario2);
     display: inline-block;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
     transition: height 300ms;
 }
 
@@ -45,8 +45,6 @@ body{
 }
 
 .contenedorProducto .parteArriba img{
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100%;
     width: 100%;
 }
