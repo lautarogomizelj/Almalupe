@@ -1,0 +1,99 @@
+.contenedorTituloDestacado{
+    width: 20%;
+    height: max-content;
+    margin: auto;
+    text-align: center;
+    /* outline: 1px solid red; */
+}
+
+.contenedorTituloDestacado h2{
+    color: #000;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+.contenedorGrid{
+    grid-template-columns: repeat(auto-fit, 17.5rem);
+    margin: 60px auto 0;
+    display: grid;
+    justify-content: center;
+    width: 65%;
+    justify-content: space-evenly;
+}
+
+
+
+/*---------------------------------------------------------------------------------------*/
+
+.btnVerMasProductos{
+    margin: 0 auto ;
+    background: var(--div-background-color);
+    width: 12rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    border-radius: 1px;
+    cursor: pointer;
+
+    transition: all 300ms ;
+}
+
+.btnVerMasProductos a{
+    text-decoration: none;
+    font-family: var(--font-family-principal);
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ;
+
+}
+
+.btnVerMasProductos:hover{
+    background: #fff;
+    border: 1px solid var(--text-color);
+}
+
+.btnVerMasProductos:hover > a{
+    color: var(--text-color );
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+.contenedorNewsletter{
+    background-color: red;
+    width: 25rem;
+    height: 2rem;
+    margin: 3rem auto;
+    display: flex;
+}
+
+.contenedorNewsletter input{
+    background-color: #F4F4F4;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 5px 0 rgba(0,0,0,.2);
+    color: #333333;
+    border-radius: 1px;
+    font-family: var(--font-family-secundario2);
+    font-size: 17px;
+    padding-left: 8px;
+
+    transition: all 200ms;
+}
+
+/* .contenedorNewsletter .btnSubmit{
+
+} */
+
+
+
+
+/*-*-------------------------------------------------------------------------------------------------*/
+

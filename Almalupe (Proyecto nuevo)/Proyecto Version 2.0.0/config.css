@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+:root{
+    --text-color:#5d4954;
+    --div-background-color: #835886ad;
+    --font-family-principal: 'Mulish', sans-imimserif;
+    --font-family-secundario1: 'Abel', sans-serif;
+    --font-family-secundario2: 'Roboto', sans-serif;
+}
+
+h1{
+    color: var(--text-color);
+    font-family: var(--font-family-principal);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+
+h2{
+    font-family: var(--font-family-principal);
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+h3{
+    color: #fff;
+    font-size: 14px;
+    font-family: var(--font-family-principal);
+    letter-spacing: 1px;
+    width: max-content;
+    text-decoration: none;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);     
+}

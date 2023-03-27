@@ -1,0 +1,12 @@
+La db tendria que tener:
+
+CREATE NEW DATABASE almalupe
+
+CREATE TABLE productos
+	-id producto int
+	-nombre string
+	-precio int
+	-descripcion string
+	-descuento int 
+	-stock int
+	-destacado int (si o no)

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+:root{
+    --font-family-secundario2: 'Roboto', sans-serif;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+
+.contenedorCarousel{
+    max-width: 60rem;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    outline: 1px solid black;
+    height: 34rem;
+}
+
+
+
+.contenedorTarjetaProducto{
+    width: 19rem;
+    height: 25rem;
+    box-shadow: 0 9px 7px #dfdfdf;    
+    font-family: var(--font-family-secundario2);
+    display: inline-block;
+    margin-bottom: 60px;
+    transition: height 300ms;
+}
+
+.contenedorTarjetaProducto:hover{
+    box-shadow: 0 9px 7px #b3b1b1;  
+}
+
+/* --------------------------------------------- parte arriba --------------------------------------------- */
+
+.contenedorTarjetaProducto .parteArriba{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: height 300ms;
+    cursor: pointer;
+    position: relative;
+}
+
+.contenedorTarjetaProducto .parteArriba img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* ----------------------- Boton de Corazon ----------------------- */
+
+.contenedorTarjetaProducto .parteArriba .btnIcono{
+    position: absolute;
+    top: 4%;
+    left: 85%;
+    
+    opacity: 0;
+    transition: opacity 150ms;
+}
+
+.contenedorTarjetaProducto .parteArriba .btnIcono > i{
+    font-size: 25px;
+    transition: all 200ms ease-in-out;
+    padding-top: 4px;
+}
+
+.contenedorTarjetaProducto .parteArriba .btnIcono > i:hover{
+    color: red;
+}
+
+
+/* --------------------------------------------- parte abajo --------------------------------------------- */
+
+.contenedorTarjetaProducto .parteAbajo{
+    width: 100%;
+    height: 25%;
+    opacity: 0;
+    transition: height 300ms, opacity 150ms;
+}
+
+.contenedorTarjetaProducto .parteAbajo > div{
+    margin: 0 30px;
+    display: block;
+    position: relative;
+}
+
+/* ----------------------- Row 1 (categoria)----------------------- */
+.contenedorTarjetaProducto .parteAbajo .row-1{
+    margin-top: 20px;
+    height: 15%;
+}
+
+.contenedorTarjetaProducto .parteAbajo .row-1 span{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+/* ----------------------- Row 2 (titulo)----------------------- */
+.contenedorTarjetaProducto .parteAbajo .row-2{
+    height: 15%;
+    margin-top: 9px;
+}
+
+.contenedorTarjetaProducto .parteAbajo .row-2 span{
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    font-size: 17.5px;
+
+}
+
+/* ----------------------- Row 3 ----------------------- */
+.contenedorTarjetaProducto .parteAbajo .row-3{
+    margin-top: 13px;
+    height: 1%;
+    background-color: #ccc;
+}
+
+/* ----------------------- Row 4 (precio) ----------------------- */
+.contenedorTarjetaProducto .parteAbajo .row-4{
+    margin-top: 14px;
+    height: 28%;
+}
+
+.contenedorTarjetaProducto .parteAbajo .row-4 span{
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}

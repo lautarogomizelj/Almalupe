@@ -1,0 +1,30 @@
+@media screen and (max-width: 600px){   
+    .contenedorGlobalProducto{
+        height: 28.5rem !important;
+    }
+
+    .contenedorGlobalProducto .contenedorProducto{
+        height: 26rem !important;
+    }
+
+    .contenedorGlobalProducto .contenedorProducto .parteArriba{
+        height: 80% !important;
+    }
+
+    .contenedorGlobalProducto .contenedorProducto .parteAbajo{
+        opacity: 1 !important; 
+        text-align: center;
+    }
+
+    .contenedorGlobalProducto .contenedorProducto .parteAbajo .row-1{
+        display: none !important;
+    }
+
+    .contenedorGlobalProducto .contenedorProducto .parteAbajo .row-2{
+        margin-top: 16px !important;
+    }
+
+    .contenedorGlobalProducto .contenedorProducto .parteAbajo .row-4{
+        margin-top: 8px !important;
+    }
+}
