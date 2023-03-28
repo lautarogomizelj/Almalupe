@@ -56,10 +56,25 @@
             </div>
 
             <ul class="nav-links">
-                <li> <a href="index.php"> <h2>Inicio</h2> </a> </li>
-                <li> <a href="productos.php"> <h2>Productos</h2> </a> </li>
-                <li> <a href="comoComprar.php"> <h2>Como comprar</h2> </a> </li>
-                <li> <a href="contacto.php"> <h2>Contacto</h2> </a> </li>                
+                <li <?php if ($pagina_actual == "index.php"){ ?> class="subtitulo Activo" <?php } ?> > <a href="index.php"> <h2>Inicio</h2> </a> </li>
+                <li <?php if ($pagina_actual == "productos.php"){ ?> class="subtitulo Activo" <?php } ?> > 
+                    <a href="productos.php"> <h2>Productos</h2> </a> 
+                    <ul class="sub-menu">
+                        <li><a href="uno.php"> <h2>Idumentaria</h2> </a></li>
+                        <li><a href="dos.php"> <h2>Calzado</h2> </a></li>
+                        <li><a href="tres.php"> <h2>Accesorios</h2> </a></li>
+                        <li><a href="cuatro.php"> <h2>Vestidos</h2> </a></li>
+                        <li><a href="cuatro.php"> <h2>Poleron</h2> </a></li>
+                        <li><a href="cuatro.php"> <h2>Sacos abiertos</h2> </a></li>
+                        <li><a href="cuatro.php"> <h2>Enteritos</h2> </a></li>
+                        <li><a href="cuatro.php"> <h2>Vestido</h2> </a></li>
+                        <li><a href="cuatro.php"> <h2>Vestido</h2> </a></li>
+                        <li><a href="cuatro.php"> <h2>Vestido</h2> </a></li>
+
+                    </ul>
+                </li>
+                <li <?php if ($pagina_actual == "comoComprar.php"){ ?> class="subtitulo Activo" <?php } ?> > <a href="comoComprar.php"> <h2>Como comprar</h2> </a> </li>
+                <li <?php if ($pagina_actual == "contacto.php"){ ?> class="subtitulo Activo" <?php } ?> > <a href="contacto.php"> <h2>Contacto</h2> </a> </li>                
             </ul>
 
             <!-- mobile view -->
@@ -82,10 +97,10 @@
             
 
             <ul class="nav-links mobile" id="hola">
-                <li> <a href=""> <h2>Inicio</h2> </a> </li>
-                <li> <a href=""> <h2>Productos</h2> </a> </li>
-                <li> <a href=""> <h2>Como comprar</h2> </a> </li>
-                <li> <a href=""> <h2>Contacto</h2> </a> </li>  
+                <li <?php if ($pagina_actual == "index.php"){ ?> class="subtituloActivo" <?php } ?> > <a href="index.php"> <h2>Inicio</h2> </a> </li>
+                <li <?php if ($pagina_actual == "productos.php"){ ?> class="subtituloActivo" <?php } ?> > <a href="productos.php"> <h2>Productos</h2> </a> </li>
+                <li <?php if ($pagina_actual == "comoComprar.php"){ ?> class="subtituloActivo" <?php } ?> > <a href="comoComprar.php"> <h2>Como comprar</h2> </a> </li>
+                <li <?php if ($pagina_actual == "contacto.php"){ ?> class="subtituloActivo" <?php } ?> > <a href="contacto.php"> <h2>Contacto</h2> </a> </li>
             </ul>
 
 

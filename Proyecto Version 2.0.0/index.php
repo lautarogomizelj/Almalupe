@@ -1,3 +1,7 @@
+<?php
+    $pagina_actual = "index.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,35 +29,49 @@
 </head>
 <body>
 
-    <?php 
-        include 'Templates/PHP/template_header.php';
-    ?>
-
-
-    <!-- <div class="contenedorTituloDestacado">
-        <h2>Destacado</h2>
-    </div> -->
-    
-    <div class="contenedorGrid">
+    <header>
         <?php 
-            include 'Templates/PHP/template_producto.php';
-            include 'Templates/PHP/template_producto.php';
-            include 'Templates/PHP/template_producto.php';
-            include 'Templates/PHP/template_producto.php';
-            include 'Templates/PHP/template_producto.php';
-            include 'Templates/PHP/template_producto.php';
+            include 'Templates/PHP/template_header.php';
         ?>
-    </div>
+    </header>
+
 
     
+    <section>
+        <!-- <article>
+            <div class="contenedorSubtitulo">
+                <h2>Categorías destacadas</h2>
+            </div>
+        </article> -->
 
+
+        <article>           
+            <div class="contenedorSubtitulo">
+                <h2>Productos destacados</h2>
+            </div>
+            
+            <div class="contenedorGrid">
+                <?php 
+                    include 'Templates/PHP/template_producto.php';
+                    include 'Templates/PHP/template_producto.php';
+                    include 'Templates/PHP/template_producto.php';
+                    include 'Templates/PHP/template_producto.php';
+                    include 'Templates/PHP/template_producto.php';
+                    include 'Templates/PHP/template_producto.php';
+                ?>
+            </div>
+        </article>
+        
+        
+        
+        
+        <div class="btnVerMasProductos">
+            <a href="">
+                Ver más productos
+            </a>
+        </div>
     
-    <div class="btnVerMasProductos">
-        <a href="">
-            Ver más productos
-        </a>
-    </div>
-    
+    </section>
 
     <footer>
         <div class="contenedorNewsletter">
@@ -63,7 +81,8 @@
             </form>
         </div>
     </footer>
-
+    
+    
     <script src="Backend/JS/app.js"></script>
     <script src="Backend/JS/animacionesIndex.js"></script>
 </body>

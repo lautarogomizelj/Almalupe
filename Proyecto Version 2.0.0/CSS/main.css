@@ -1,13 +1,12 @@
-.contenedorTituloDestacado{
-    width: 20%;
+.contenedorSubtitulo{
+    width: 65%;
     height: max-content;
-    margin: auto;
-    text-align: center;
-    /* outline: 1px solid red; */
+    margin: 40px auto 0;
+    border-bottom: 1px solid var(--div-background-color);
+    min-width: 19rem;
 }
 
-.contenedorTituloDestacado h2{
-    color: #000;
+.contenedorSubtitulo h2{
     color: var(--text-color);
     font-size: 20px;
 }
@@ -16,11 +15,12 @@
 
 .contenedorGrid{
     grid-template-columns: repeat(auto-fit, 17.5rem);
-    margin: 60px auto 0;
+    margin: 40px auto 0;
     display: grid;
     justify-content: center;
     width: 65%;
     justify-content: space-evenly;
+    /* outline: 1px solid red; */
 }
 
 
@@ -28,7 +28,7 @@
 /*---------------------------------------------------------------------------------------*/
 
 .btnVerMasProductos{
-    margin: 0 auto ;
+    margin: 20px auto 0;
     background: var(--div-background-color);
     width: 12rem;
     height: 2rem;
