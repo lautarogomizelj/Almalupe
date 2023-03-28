@@ -10,8 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/1ff8ebd91d.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="config.css">
+
+    <link rel="stylesheet" href="Templates/CSS/template_popup.css">
 
     <link rel="stylesheet" href="Templates/CSS/template_header.css">
     <link rel="stylesheet" href="Templates/CSS/template_header_responsive.css">
@@ -20,6 +23,7 @@
     <link rel="stylesheet" href="Templates/CSS/template_producto_responsive.css">
 
     <!-- <link rel="stylesheet" href="Templates/CSS/template_header.css"> -->
+    <link rel="stylesheet" href="Templates/CSS/template_footer.css">
 
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="responsive.css">
@@ -35,7 +39,9 @@
         ?>
     </header>
 
-
+    <?php
+        include 'Templates/PHP/template_popup.php';
+    ?>
     
     <section>
         <!-- <article>
@@ -81,6 +87,10 @@
             </form>
         </div>
     </footer>
+
+    <?php
+        include 'Templates/PHP/template_footer.php';
+    ?>
     
     
     <script src="Backend/JS/app.js"></script>

@@ -63,3 +63,18 @@ document.onclick = function(e){
         document.body.classList.remove("no-scroll")
     }
 }
+
+// Popup javascript
+//Show popup on window load
+// window.onload = () => {
+//     document.querySelectorAll('body > *:not(.pop-up-container)')
+//         .forEach(x => x.style.filter = 'blur(5px)')
+//     document.querySelectorAll('.pop-up-container')[0].style.display = 'block'
+// }
+
+// // Close popup on btn click
+// document.querySelector(".popup-exit").addEventListener('click', function(){
+//     document.querySelectorAll('.pop-up-container')[0].style.display = "none"
+//     document.querySelectorAll('body > *:not(.pop-up-container)')
+//         .forEach(x => x.style.filter = 'blur(0)')
+// })
