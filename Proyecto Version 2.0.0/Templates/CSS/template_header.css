@@ -343,6 +343,91 @@
 }
 
 
+.contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha > div > i{
+    font-size: 19px;
+    color: var(--text-color);
+    color: #fff;
+}
+
+.contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha .iconoBusqueda{
+    width: 40%;
+    display: flex;
+    justify-content: right;
+}
+
+.contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha .iconoCarrito{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha .iconoCarrito .contenedorInformacionCarrito{
+    margin-left: 5px;
+    width: max-content;
+    text-align: center;
+}
+
+.contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha .iconoCarrito .contenedorInformacionCarrito span{
+    font-family: var(--font-family-principal);
+    color: #fff;
+    font-size: 14px;
+}
+
+/*estilo para input buscador absolute*/
+
+.contenedor .seccion.abajo .contenedorMenuOpciones .contenedorBusquedaAbsolute{
+    display: flex;
+    height: 30px;
+    width: 15rem;
+    opacity: 0;
+    display: none;
+    
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+
+}
+
+.contenedor .seccion.abajo .contenedorMenuOpciones .contenedorBusquedaAbsolute input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 5px 0 rgba(0,0,0,.2);
+    color: #333333;
+    border-radius: 2px;
+    font-family: var(--font-family-secundario2);
+    font-size: 14px;
+    padding-left: 8px;
+}
+
+.animacionesEpicas{
+    display: block !important;
+
+    animation-name: moverContenedor;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes moverContenedor {
+    0% {left: 95%;
+        opacity: 1;
+        display: block;}
+
+    100% {left: 34%;
+        opacity: 1;
+        display: block;}
+    
+}
+
+
+
+
+
 /* Estilo para contenedor de  */
 
 .contenedor .seccion.abajo .nav-links.mobile{
@@ -360,12 +445,22 @@
 
 .contenedor .seccion.abajo .nav-links.mobile .li_navLinks{
     width: max-content;
-    width: 9.5rem;
+    width: 12.5rem;
     height: 50px;
+}
+
+.contenedor .seccion.abajo .nav-links.mobile .li_navLinks i{
+    position: absolute;
+    top: 14px;
+    right: 11px;
+    font-size: 19px;
+    color: var(--text-color);
 }
 
 .contenedor .seccion.abajo .nav-links.mobile .li_navLinks a{
     text-decoration: none;
+    justify-content: left;
+    padding-left: 35px;
 }
 
 
@@ -373,35 +468,34 @@
     color: var(--text-color) !important;
 }
 
-.contenedor .seccion.abajo .nav-links.mobile .li_navLinks:hover > .responsiveSub-menu{
-    display: block;
-    opacity: 1;
-}
-
-
 
 /*Estilo para subttitulo secundarios (responsiveSub-menu)*/
 
 .contenedor .seccion.abajo .nav-links.mobile .li_navLinks .responsiveSub-menu{
     background: #fff;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
     transition: all .5s;
-    position: absolute;
     opacity: 0;
-    display: none;
-    top: 0;
-    left: 9.5rem;
+    width: 75%;
+    margin-left: 25%;    
 }
+
 
 .contenedor .seccion.abajo .nav-links.mobile .li_navLinks .responsiveSub-menu .dropdownItem{
     width: 9.5rem;
     height: 50px;
 }
+.contenedor .seccion.abajo .nav-links.mobile .li_navLinks .responsiveSub-menu .dropdownItem a{
+    padding: 0;
+}
 
-
+.active1{
+    opacity: 1 !important;
+    display: block !important;
+}
 
 .active{
     opacity: 1;
+    display: block;
     transform: translatex(0px) !important;
 }
 

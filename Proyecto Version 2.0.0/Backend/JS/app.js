@@ -1,6 +1,5 @@
 function getScreenWidth(){
     documentWidth = screen.width
-    console.log(documentWidth)
 
     if (documentWidth > 600){
         document.querySelectorAll(".contenedorProducto").forEach(item => {
@@ -48,12 +47,22 @@ document.getElementById("logoAlmalupe").addEventListener("click", function(){
 
 
 const btnMenu = document.getElementById("btnMenuResponsive")
-const menu = document.getElementById("hola")
+const menu = document.getElementById("nav-links-mobile")
+/*------*/
+const dropdownMenuResponsiveButton = document.getElementById("dropdownMenu-responsive")
+const contenedorDropdownResponsive = document.querySelector(".responsiveSub-menu")
+const iconDropdown1 = dropdownMenuResponsiveButton.childNodes[3]
+
+const hijonum3 = menu.childNodes[5]
 
 btnMenu.addEventListener("click", function(){
     menu.classList.toggle("active")
     document.body.classList.toggle("opacity")
     document.body.classList.toggle("no-scroll")
+
+    contenedorDropdownResponsive.classList.remove("active1")
+    hijonum3.style.margin = "0"
+    iconDropdown1.style.transform = "rotate(0)"
 });
 
 document.onclick = function(e){
@@ -61,8 +70,49 @@ document.onclick = function(e){
         menu.classList.remove("active")
         document.body.classList.remove("opacity")
         document.body.classList.remove("no-scroll")
+
+        contenedorDropdownResponsive.classList.remove("active1")
+        hijonum3.style.margin = "0"
+        iconDropdown1.style.transform = "rotate(0)"
     }
 }
+
+dropdownMenuResponsiveButton.addEventListener("click", function(){
+    contenedorDropdownResponsive.classList.toggle("active1")
+    
+    if (contenedorDropdownResponsive.classList.contains("active1")){
+        hijonum3.style.margin = `${contenedorDropdownResponsive.offsetHeight}px 0 0 0`;
+        iconDropdown1.style.transform = "rotate(-90deg)"
+    }
+    else{
+        hijonum3.style.margin = "0"
+        iconDropdown1.style.transform = "rotate(0)"
+    }
+});
+
+
+const iconoBusquedaCarrito = document.getElementById("iconoBusquedaCarrito")
+const contenedorBusquedaAbsolute = document.querySelector(".contenedorBusquedaAbsolute")
+
+iconoBusquedaCarrito.addEventListener("click", function(){
+    contenedorBusquedaAbsolute.classList.toggle("animacionesEpicas")
+    
+    if (iconoBusquedaCarrito.classList == "fa fa-search"){
+
+        iconoBusquedaCarrito.className = "fa fa-times"
+        iconoBusquedaCarrito.style.color = "var(--text-color)"
+    }
+    else{
+        
+        iconoBusquedaCarrito.className = "fa fa-search"
+        iconoBusquedaCarrito.style.color = "#fff"
+    }
+
+})
+
+
+
+
 
 // // Popup javascript
 // //Show popup on window load

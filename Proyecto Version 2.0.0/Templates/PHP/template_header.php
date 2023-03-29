@@ -4,7 +4,7 @@
     
     <div class="contenedor">    
         <div class="seccion arriba">
-
+            
             <div class="nombreMariana">
                 <h3>by Mariana Paniagua</h3>
             </div>
@@ -54,11 +54,11 @@
             <div id="logoAlmalupe">
                 <h1>A</h1>
             </div>
-
+            
             <ul class="nav-links">
                 <li class="li_navLinks"> <a href="index.php"> <h2>Inicio</h2> </a> </li>
                 <li class="li_navLinks"> 
-                    <a href="productos.php" id="dropdownMenuOne"> <h2>Productos</h2> </a> 
+                    <a href="productos.php"> <h2>Productos</h2> </a> 
                     <div class="sub-menu">
                         <div class="dropdownItem">
                             <a href="uno.php"> <h2>Idumentaria</h2> </a>
@@ -93,27 +93,44 @@
                         <div class="linea"></div>
                     </div>
                 </div>
+
+                <form action="">
+                    <div class="contenedorBusquedaAbsolute">
+                        <input type="text" placeholder="Buscá entre tantos productos...">
+                    
+                        <!-- <button type="submit" class="icon">
+                            <i id="busqueda" type="submit" class="fas fa-search"></i>
+                        </button> -->
+                    </div>
+                </form>
                 
                 <div class="sub derecha">
-                    <div class="iconoBusqueda"></div>
-                    <div class="iconoCarrito"></div>
+                    <div class="iconoBusqueda">
+                        <i class="fa fa-search" aria-hidden="true" id="iconoBusquedaCarrito"></i>
+                    </div>
+                    <div class="iconoCarrito">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <div class="contenedorInformacionCarrito">
+                            <span>0</span>
+                            <span>-</span>
+                            <span>$0,00</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            
-            
-            <ul class="nav-links mobile" id="hola">
+            <ul class="nav-links mobile" id="nav-links-mobile">
                 <li class="li_navLinks"> <a href="index.php"> <h2>Inicio</h2> </a> </li>
-                <li class="li_navLinks"> 
+                <li class="li_navLinks" id="dropdownMenu-responsive"> 
                     <a> <h2>Productos</h2> </a> 
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
 
-                    <!-- <div class="responsiveSub-menu">
+                    <div class="responsiveSub-menu">
                         <div class="dropdownItem"><a href="dos.php">    <h2>Idumentaria</h2>        </a></div>
                         <div class="dropdownItem"><a href="dos.php">    <h2>Calzado</h2>        </a></div>
                         <div class="dropdownItem"><a href="dos.php">    <h2>Acccesorios</h2>        </a></div>
 
-                    </div> -->
-                
+                    </div>
                 </li>
                 <li class="li_navLinks"> <a href="comoComprar.php"> <h2>Como comprar</h2> </a> </li>
                 <li class="li_navLinks"> <a href="contacto.php"> <h2>Contacto</h2> </a> </li>
