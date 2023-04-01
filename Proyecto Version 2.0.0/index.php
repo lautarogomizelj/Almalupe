@@ -1,5 +1,5 @@
 <?php
-    $pagina_actual = "index.php";
+    $paginaActual = "index.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,8 @@
     <script src="https://kit.fontawesome.com/1ff8ebd91d.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <link rel="stylesheet" href="config.css">
+    <link rel="stylesheet" href="CSS/config.css">
+    <link rel="stylesheet" href="CSS/main.css">
 
     <link rel="stylesheet" href="Templates/CSS/template_popup.css">
 
@@ -25,10 +26,8 @@
     <!-- <link rel="stylesheet" href="Templates/CSS/template_header.css"> -->
     <link rel="stylesheet" href="Templates/CSS/template_footer.css">
 
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="responsive.css">
 
-    <title>Almalupe</title>
+    <title>Almalupe - Inicio</title>
 
 </head>
 <body>
@@ -53,7 +52,7 @@
 
         <article>           
             <div class="contenedorSubtitulo">
-                <h2>Productos destacados</h2>
+                <h3>Productos destacados</h3>
             </div>
             
             <div class="contenedorGrid">
@@ -72,10 +71,30 @@
         
         
         <div class="btnVerMasProductos">
-            <a href="">
+            <a href="productos.php">
                 Ver más productos
             </a>
         </div>
+
+
+
+        <!----------Empieza publicidad-----------> 
+        <article>
+            <div class="contenedorSubtitulo">
+                <h3>¡Seguinos en nuestras redes sociales!</h3>
+            </div>
+
+            <div class="contenedor-publicidad">
+                <!-- <h3>¡Seguinos en nuestras redes!</h3> -->
+                
+                <div class="contenedor-iconos">
+                    <a href="" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/almalupee/" class="fa fa-instagram"></a>
+                    <a href="whatsapp:contact=01144279069@s.whatsapp.com&message="I'd like to chat with you" class="fa fa-whatsapp"></a>
+                </div>
+            </div>
+        </article>
+        <!----------Termina publicidad-----------> 
     
     </section>
 

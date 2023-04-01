@@ -8,19 +8,59 @@
     align-items: center;
 }
 
-/* @keyframes cambio {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-    
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-    
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-    
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
-} */
+.infoEnvios1{
+    display: none;
+    width: 100%;
+    height: 20px;
+    align-items: center;
+}
+.infoEnvios1 > span{
+    color: var(--text-color);
+    font-family: var(--font-family-principal);
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-size: 13px;
+    position: absolute;
+    opacity: 0;
+    transition: all .3s;
+    left: 0
+}
+
+.infoEnvios1 .uno{
+    animation: movimientoSpan;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+
+}
+
+.infoEnvios1 .dos{
+    animation: movimientoSpan;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.infoEnvios1 .tres{
+    animation: movimientoSpan;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-delay: 4s;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes movimientoSpan {
+    0%{
+        opacity: 1;
+        transform: translateX(-40vw);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+
 
 .infoEnvios p{
     color: var(--text-color);
@@ -57,32 +97,106 @@
     position: relative;
     display: flex;
 }
+
+/*-------------*/
 .contenedor .seccion.arriba .contenedorSesion{
     width: 18rem;
     height: 100%;
-    display: block;
     display: flex;
     position: absolute;
-    right: 10vw;
+    /* right: 10vw; */
+    left: 10vw;
 }
+
 .contenedor .seccion.arriba .contenedorSesion > div{
     height: 100%;
-    text-align: center;
-    position: relative;
-}    
+}
+
+.contenedor .seccion.arriba .contenedorSesion > div:hover{
+    background-color: #efefef;
+}
+
+.contenedor .seccion.arriba .contenedorSesion > div:hover > a > span{
+    color: var(--div-background-color);
+}
+
+
+.contenedor .seccion.arriba .contenedorSesion > div > a{
+    cursor: pointer;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor .seccion.arriba .contenedorSesion > div > a > span{
+    color: #fff;
+    font-size: 14px;
+    font-family: var(--font-family-principal);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
+}
 
 .contenedor .seccion.arriba .contenedorSesion .izq{
     width: 55%;
+    left: 0;
 }
 .contenedor .seccion.arriba .contenedorSesion .der{
     width: 45%; 
+    right: 0;
 }
+
+/*-------------*/
+
 .contenedor .seccion.arriba .nombreMariana{
     position: relative;
     width: 15rem;
     height: 100%;            
     left: 10vw;
+    outline: 1px solid red;
+    display: none;
 }
+
+.contenedor .seccion.arriba .contenedorCarrito{
+    position: absolute;
+    right: 10vw;
+    display: flex;
+    width: 8rem;
+    height: 100%;
+    outline: 1px solid red;
+    align-items: center;
+}
+
+.contenedor .seccion.arriba .contenedorCarrito a{
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+}
+
+.contenedor .seccion.arriba .contenedorCarrito a > i{
+    font-size: 19px;
+    color: #fff;
+}
+
+.contenedor .seccion.arriba .contenedorCarrito a .contenedorInformacionCarrito{
+    outline: 1px solid black;
+    width: max-content;
+    margin-left: 10px;
+}
+
+.contenedor .seccion.arriba .contenedorCarrito a .contenedorInformacionCarrito span{
+    color: #fff;
+    font-size: 14px;
+    font-family: var(--font-family-principal);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
 
 /*------------Estilo para la seccion media del contenedor------------------*/
 .contenedor .seccion.medio{
@@ -239,6 +353,15 @@
     transition: all .5s;
 }
 
+.subtituloActivo{
+    background-color: #efefef !important;
+}
+
+.subtituloActivo > h2{
+    color: var(--div-background-color);
+}
+
+
 .contenedor .seccion.abajo .nav-links .li_navLinks a:hover{
     background-color: #efefef;
 }
@@ -246,6 +369,7 @@
 .contenedor .seccion.abajo .nav-links .li_navLinks a:hover h2{
     color: var(--div-background-color);
 } 
+
 
 /*Ver contenedor hijo*/
 .contenedor .seccion.abajo .nav-links .li_navLinks:hover > .sub-menu{
@@ -318,12 +442,20 @@
     justify-content: space-between;
 }
 
+
 .contenedor .seccion.abajo .contenedorMenuOpciones .sub{
     display: flex;
     align-items: center;
     width: 50%;
     height: 100%;
+    position: relative;
 }
+
+/*-----izquierdad-----*/
+.contenedor .seccion.abajo .contenedorMenuOpciones .sub.izquierda{
+    width: 40%;
+}
+
 
 .contenedor .seccion.abajo .contenedorMenuOpciones .sub.izquierda .menuIconoHamburguesa{
     display: block;
@@ -342,23 +474,99 @@
     background-color: #fff;
 }
 
+/* font-size: 19px; */
+    /* color: #fff; */
 
-.contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha > div > i{
+
+/*-----derecha-----*/
+.contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha{
+    width: 60%;
+}
+
+/*estilo para formulario e hijos*/
+.contenedor .seccion.abajo .contenedorMenuOpciones form{
+    display: flex;
+    height: 30px;
+    width: 300px;
+    width: max-content;
+    align-items: center;
+    transform: translatex(18vw);
+    position: absolute;
+}
+
+.contenedor .seccion.abajo .contenedorMenuOpciones form > i{
     font-size: 19px;
-    color: var(--text-color);
     color: #fff;
 }
 
-.contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha .iconoBusqueda{
-    width: 40%;
-    display: flex;
-    justify-content: right;
+.contenedor .seccion.abajo .contenedorMenuOpciones form > i:first-child {
+    position: absolute;
+    color: #333333;
+
 }
 
+.contenedor .seccion.abajo .contenedorMenuOpciones form > i:last-child{
+    display: none;
+}
+
+.contenedor .seccion.abajo .contenedorMenuOpciones form input{
+    display: none;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;   
+    box-shadow: 0px 2px 5px 0 rgba(0,0,0,.2);
+    color: #333333;
+    border-radius: 2px;
+    font-family: var(--font-family-secundario2);
+    font-size: 14px;
+    padding-left: 25px;
+    padding-top: 2px;
+}
+
+.contenedor .seccion.abajo .contenedorMenuOpciones form input::placeholder{
+    color: #333333be;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: var(--font-family-secundario2);   
+}
+
+.activo12{
+    display: block !important;
+    opacity: 1 !important;
+}
+
+.claseMoverFormulario{
+    animation-name: moverContenedor;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes moverContenedor {
+    0% {transform: translatex(18vw);}
+
+    100% {transform: translatex(-38vw);}    
+}
+
+.desaparece{
+    display: none;
+}
+
+/*estilo para informacion sobre carrito*/
 .contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha .iconoCarrito{
-    width: 60%;
+    position: absolute;
+    right: 0;
+    width: max-content;
+    padding-right: 6vw;
     display: flex;
     justify-content: center;
+}
+
+.contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha .iconoCarrito > i{
+    font-size: 19px;
+    color: #fff;
 }
 
 .contenedor .seccion.abajo .contenedorMenuOpciones .sub.derecha .iconoCarrito .contenedorInformacionCarrito{
@@ -373,56 +581,7 @@
     font-size: 14px;
 }
 
-/*estilo para input buscador absolute*/
 
-.contenedor .seccion.abajo .contenedorMenuOpciones .contenedorBusquedaAbsolute{
-    display: flex;
-    height: 30px;
-    width: 15rem;
-    opacity: 0;
-    display: none;
-    
-    position: absolute;
-    left: 40%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-
-
-}
-
-.contenedor .seccion.abajo .contenedorMenuOpciones .contenedorBusquedaAbsolute input{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    box-shadow: 0px 2px 5px 0 rgba(0,0,0,.2);
-    color: #333333;
-    border-radius: 2px;
-    font-family: var(--font-family-secundario2);
-    font-size: 14px;
-    padding-left: 8px;
-}
-
-.animacionesEpicas{
-    display: block !important;
-
-    animation-name: moverContenedor;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-
-}
-
-@keyframes moverContenedor {
-    0% {left: 95%;
-        opacity: 1;
-        display: block;}
-
-    100% {left: 34%;
-        opacity: 1;
-        display: block;}
-    
-}
 
 
 

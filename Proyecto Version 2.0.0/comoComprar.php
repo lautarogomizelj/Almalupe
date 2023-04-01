@@ -1,3 +1,7 @@
+<?php
+    $paginaActual = "comoComprar.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +11,7 @@
 
     <script src="https://kit.fontawesome.com/1ff8ebd91d.js"></script>
     
-    <link rel="stylesheet" href="config.css">
+    <link rel="stylesheet" href="CSS/config.css">
 
     <link rel="stylesheet" href="Templates/CSS/template_header.css">
     <link rel="stylesheet" href="Templates/CSS/template_header_responsive.css">

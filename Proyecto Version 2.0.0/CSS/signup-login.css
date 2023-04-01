@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-exito: #2ecc71;
+    --color-error: #ff0000;
+
+}
+
+body{
+    font-family: 'Roboto Slab', serif;
+    /* background-image: url('https://c.wallhere.com/photos/e0/c2/1680x1050_px_abstract_Colorful_Easter_Gradient_Lightning_Simple_sky-777810.jpg!d');  */
+    /* background-attachment: fixed; */
+    /* background-repeat: no-repeat;
+    /* background: #242424; */
+    background: #81757c;
+    /* overflow: hidden; */
+}
+
+
+
+.contenedor{
+    z-index: 100;
+    background: rgb(255, 255, 255);
+    /* background: #3e413e; */
+    /* box-shadow: 1px 7px 41px -6px rgba(0, 0, 0, 0.67); */
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.26);
+}
+
+#contenedor_signup{
+    height: 920px;
+    width: 500px;
+    margin: 20px auto;
+}
+
+#contenedor_login{
+    height: 550px;
+    width: 470px;
+    margin: 8% auto;
+}
+
+/*Parte arriba del contenedor*/
+.contenedor .logo{
+    height: 140px;
+    text-align: center;
+    border-bottom: 1px solid #485C48;
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.contenedor .logo img{
+    height: 100px;
+    width: 100px;
+    margin-top: 15px;
+}
+/*estilo para el div que contiene los inputs label, etc*/
+
+.contenedor .grupo{
+    /* background: #485C48; */
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/*estilo para iconos*/
+
+.contenedor .grupo i{
+    position: absolute;
+    right: 10px;
+    top: 40px;
+}
+
+#icono, #icono1, #icono2, #icono3, #icono4, #icono5, #icono6, #icono7{
+    visibility: hidden;
+}
+
+.contenedor .grupo.exito input{
+    border-color: var(--color-exito);
+} 
+
+.contenedor .grupo.error input{
+    border-color: var(--color-error);
+} 
+
+.contenedor .grupo.exito input:focus{
+    border-color: var(--color-exito);
+} 
+
+.contenedor .grupo.error input:focus{
+    border-color: var(--color-error);
+} 
+
+.contenedor .grupo.exito i.fa-check-circle{
+    color: var(--color-exito);
+}
+
+ .contenedor .grupo.error i.fa-exclamation-circle{
+    color: #e74c3c;
+}
+
+/*estilo para labels*/
+
+.contenedor form .grupo label{
+    font-size: 17px;
+    display: block;
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+/*estilo a inputs y sus pseudo-elementos*/
+
+.contenedor form [type="text"], .contenedor form [type="password"]{
+    border-radius: 3px;
+    display: block;
+    border: 2px solid #f0f0f0;
+    width: 350px;
+    height: 38px;
+    outline: none;
+    font-size: 15px;
+    color: black;
+    padding: 10px;
+}
+
+.contenedor .grupo input::placeholder{
+    font-size: 15px; 
+    color: #485C48;
+}
+
+.contenedor .grupo input:focus{
+    border-color: #a1a0a0;
+}
+.contenedor form [type="text"]:focus, .contenedor form [type="password"]:focus{
+    font-size: 15px;
+}
+
+
+
+
+
+/*estilo para el texo en caso de error*/
+.validacion{
+    color: var(--color-error);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+}
+
+
+.contenedor .row-1{
+    width: 100%;
+}
+
+.contenedor .input_dia, .contenedor .input_año, .contenedor .input_mes{
+    height: 35px;
+    border-radius: 2px;
+    border: 2px solid #f0f0f0;
+    outline: none;
+    margin: 0 2px;
+    padding-left: 10px;
+}
+
+.contenedor .input_dia::placeholder, .contenedor .input_año::placeholder{
+    font-size: 15px; 
+    color: #485C48;
+}
+
+
+
+.contenedor .input_mes{
+    width: 130px;
+    color: #485C48;
+}  
+
+.contenedor .input_dia{
+    width: 90px;
+}
+
+.contenedor .input_año{
+    width: 110px;
+}
+
+/*---------------------------*/
+.contenedor .input_dia.error{
+    border-color: var(--color-error);
+}
+
+.contenedor .input_dia.error:focus{
+    border-color: var(--color-error);
+}
+
+.contenedor .input_dia.exito{
+    border-color: var(--color-exito);
+}
+
+.contenedor .input_dia.exito:focus{
+    border-color: var(--color-exito);
+}
+/*---------------------------*/
+
+/*---------------------------*/
+.contenedor .input_año.error{
+    border-color: var(--color-error);
+}
+
+.contenedor .input_año.error:focus{
+    border-color: var(--color-error);
+}
+
+.contenedor .input_año.exito{
+    border-color: var(--color-exito);
+}
+
+.contenedor .input_año.exito:focus{
+    border-color: var(--color-exito);
+}
+/*---------------------------*/
+
+/*---------------------------*/
+.contenedor .input_mes.error{
+    border-color: var(--color-error);
+}
+
+.contenedor .input_mes.error:focus{
+    border-color: var(--color-error);
+}
+
+.contenedor .input_mes.exito{
+    border-color: var(--color-exito);
+}
+
+.contenedor .input_mes.exito:focus{
+    border-color: var(--color-exito);
+}
+/*---------------------------*/
+/*-----------*/
+
+.grupo1{
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.container{
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    /* background: #2ecc71; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100px;
+    height: 20px;
+    font-size: 16px; 
+    color: rgb(110, 108, 108);
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+      
+.grupo1 #first{
+    margin-top: 15px;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+      
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+      
+.container input:checked ~ .checkmark {
+    background-color: #5D4954;
+}
+      
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+      
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+      
+.container .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+/*estilo para boton y su span*/
+.contenedor .button1{
+    background: #5D4954;
+    /* margin-top: 40px; */
+    width: 350px;
+    height: 40px;
+    border-radius: 0;
+    cursor: pointer;
+    border: none;
+}
+
+.contenedor .button1 span{
+    color: white;
+    font-size: 19px;
+}
+
+
+.contenedor .row-2{
+    margin: 10px auto;
+    text-align: center;
+    width: 350px;
+}
+.contenedor .row-2 p, .contenedor .row-2 a{
+    display: inline-block;
+    font-size: 14px;
+}
+
+#boton_login{
+    margin-top: 20px;
+}
+
+
+.mensaje-error{
+    width: max-content;
+    margin: 1.5rem auto;
+    color: red;
+    font-size: 19px;
+}
+
+

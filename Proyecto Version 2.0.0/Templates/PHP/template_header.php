@@ -1,28 +1,52 @@
 <div class="infoEnvios">
         <p>Ventas minoristas / Envíos a todo el país / Hasta 12 cuotas</p>
     </div>
+
+    <div class="infoEnvios1">
+        <span class="uno">
+            Ventas minoristas
+        </span>
+        <span class="dos">
+            Envíos a todo el país
+        </span>
+        <span class="tres">
+            Hasta 12 cuotas
+        </span>
+    </div>
     
     <div class="contenedor">    
-        <div class="seccion arriba">
-            
-            <div class="nombreMariana">
-                <h3>by Mariana Paniagua</h3>
-            </div>
-            
+    <div class="seccion arriba">
             <div class="contenedorSesion">
+
                 <div class="izq">
-                    <a href="registrarProducto.php">
-                        <h3>Iniciar Sesion</h3>
+                    <a href="Pages/login.php">
+                        <span>Iniciar Sesion</span>
                     </a>
                 </div>
-                <!-- poner un guion como separador de los dos -->
-                
+
                 <div class="der">
-                    <a href="">
-                        <h3>Registrate</h3>
+                    <a href="Pages/signup.php">
+                        <span>Registrate</span>
                     </a>
                 </div>
             </div>
+            
+            <!-- <div class="nombreMariana">
+                <h3>by Mariana Paniagua</h3>
+            </div> -->
+            
+            <div class="contenedorCarrito">
+                <a href="">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    
+                    <div class="contenedorInformacionCarrito">
+                        <span>5</span>
+                        <span>-</span>
+                        <span>$12000,00</span>
+                    </div>
+                </a>
+            </div>
+
         </div>
         
         <div class="seccion medio">
@@ -56,9 +80,9 @@
             </div>
             
             <ul class="nav-links">
-                <li class="li_navLinks"> <a href="index.php"> <h2>Inicio</h2> </a> </li>
+                <li class="li_navLinks"> <a href="index.php" <?php if ($paginaActual == "index.php"){ ?> class="subtituloActivo" <?php } ?> ><h2>Inicio</h2> </a> </li>
                 <li class="li_navLinks"> 
-                    <a href="productos.php"> <h2>Productos</h2> </a> 
+                    <a href="productos.php" <?php if ($paginaActual == "productos.php"){ ?> class="subtituloActivo" <?php } ?> > <h2>Productos</h2> </a> 
                     <div class="sub-menu">
                         <div class="dropdownItem">
                             <a href="uno.php"> <h2>Idumentaria</h2> </a>
@@ -79,8 +103,8 @@
                         <div class="dropdownItem"><a href="cuatro.php"> <h2>Enteritos</h2>      </a></div>
                     </div>
                 </li>
-                <li class="li_navLinks"> <a href="comoComprar.php"> <h2>Como comprar</h2> </a> </li>
-                <li class="li_navLinks"> <a href="contacto.php"> <h2>Contacto</h2> </a> </li>                
+                <li class="li_navLinks"> <a href="comoComprar.php" <?php if ($paginaActual == "comoComprar.php"){ ?> class="subtituloActivo" <?php } ?> > <h2>Como comprar</h2> </a> </li>
+                <li class="li_navLinks"> <a href="contacto.php" <?php if ($paginaActual == "contacto.php"){ ?> class="subtituloActivo" <?php } ?> > <h2>Contacto</h2> </a> </li>                
             </ul>
             
             <!-- mobile view -->
@@ -94,26 +118,23 @@
                     </div>
                 </div>
 
-                <form action="">
-                    <div class="contenedorBusquedaAbsolute">
-                        <input type="text" placeholder="Buscá entre tantos productos...">
-                    
-                        <!-- <button type="submit" class="icon">
-                            <i id="busqueda" type="submit" class="fas fa-search"></i>
-                        </button> -->
-                    </div>
-                </form>
+                
                 
                 <div class="sub derecha">
-                    <div class="iconoBusqueda">
+                    <form action="">
                         <i class="fa fa-search" aria-hidden="true" id="iconoBusquedaCarrito"></i>
-                    </div>
+
+                        <input type="text" placeholder="Buscá productos...">
+
+                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                    </form>
+
                     <div class="iconoCarrito">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <div class="contenedorInformacionCarrito">
-                            <span>0</span>
+                            <span>5</span>
                             <span>-</span>
-                            <span>$0,00</span>
+                            <span>$8000,00</span>
                         </div>
                     </div>
                 </div>

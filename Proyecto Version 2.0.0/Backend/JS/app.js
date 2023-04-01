@@ -30,8 +30,6 @@ function getScreenWidth(){
                 item.style.height = "23rem"
             });
         })
-
-
     }   
 }
 
@@ -92,21 +90,18 @@ dropdownMenuResponsiveButton.addEventListener("click", function(){
 
 
 const iconoBusquedaCarrito = document.getElementById("iconoBusquedaCarrito")
-const contenedorBusquedaAbsolute = document.querySelector(".contenedorBusquedaAbsolute")
+const formulario = iconoBusquedaCarrito.parentElement
+
+const inputBusquedaForm = formulario.childNodes[3]
+const iconoCerrarFormulario = formulario.childNodes[5]
+
 
 iconoBusquedaCarrito.addEventListener("click", function(){
-    contenedorBusquedaAbsolute.classList.toggle("animacionesEpicas")
-    
-    if (iconoBusquedaCarrito.classList == "fa fa-search"){
+    btnMenu.classList.toggle("desaparece")
 
-        iconoBusquedaCarrito.className = "fa fa-times"
-        iconoBusquedaCarrito.style.color = "var(--text-color)"
-    }
-    else{
-        
-        iconoBusquedaCarrito.className = "fa fa-search"
-        iconoBusquedaCarrito.style.color = "#fff"
-    }
+    formulario.classList.toggle("claseMoverFormulario")
+    inputBusquedaForm.classList.toggle("activo12")
+    iconoCerrarFormulario.classList.toggle("activo12")
 
 })
 

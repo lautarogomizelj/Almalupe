@@ -18,6 +18,10 @@
         display: none;
     }
 
+    .infoEnvios1{
+        display: flex;
+    }
+
     .contenedor{
         height: 13rem;
     }

@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/template_header_copy.css">
     <link rel="stylesheet" href="../CSS/template_header_responsive_copy.css">
-    <link rel="stylesheet" href="../../config.css">
+    <link rel="stylesheet" href="../../CSS/config.css">
+    <script src="https://kit.fontawesome.com/1ff8ebd91d.js"></script>
 
 </head>
 <body style="height: 100vh;">
@@ -16,28 +17,52 @@
     <div class="infoEnvios">
         <p>Ventas minoristas / Envíos a todo el país / Hasta 12 cuotas</p>
     </div>
+
+    <div class="infoEnvios1">
+        <span class="uno">
+            Ventas minoristas
+        </span>
+        <span class="dos">
+            Envíos a todo el país
+        </span>
+        <span class="tres">
+            Hasta 12 cuotas
+        </span>
+    </div>
     
     <div class="contenedor">    
         <div class="seccion arriba">
-            
-            <div class="nombreMariana">
-                <h3>by Mariana Paniagua</h3>
-            </div>
-            
             <div class="contenedorSesion">
+
                 <div class="izq">
                     <a href="registrarProducto.php">
-                        <h3>Iniciar Sesion</h3>
+                        <span>Iniciar Sesion</span>
                     </a>
                 </div>
-                <!-- poner un guion como separador de los dos -->
-                
+
                 <div class="der">
                     <a href="">
-                        <h3>Registrate</h3>
+                        <span>Registrate</span>
                     </a>
                 </div>
             </div>
+            
+            <!-- <div class="nombreMariana">
+                <h3>by Mariana Paniagua</h3>
+            </div> -->
+            
+            <div class="contenedorCarrito">
+                <a href="">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    
+                    <div class="contenedorInformacionCarrito">
+                        <span>5</span>
+                        <span>-</span>
+                        <span>$12000,00</span>
+                    </div>
+                </a>
+            </div>
+
         </div>
         
         <div class="seccion medio">
@@ -73,7 +98,7 @@
             <ul class="nav-links">
                 <li class="li_navLinks"> <a href="index.php"> <h2>Inicio</h2> </a> </li>
                 <li class="li_navLinks"> 
-                    <a href="productos.php" id="dropdownMenuOne"> <h2>Productos</h2> </a> 
+                    <a href="productos.php"> <h2>Productos</h2> </a> 
                     <div class="sub-menu">
                         <div class="dropdownItem">
                             <a href="uno.php"> <h2>Idumentaria</h2> </a>
@@ -108,27 +133,41 @@
                         <div class="linea"></div>
                     </div>
                 </div>
+
+                
                 
                 <div class="sub derecha">
-                    <div class="iconoBusqueda"></div>
-                    <div class="iconoCarrito"></div>
+                    <form action="">
+                        <i class="fa fa-search" aria-hidden="true" id="iconoBusquedaCarrito"></i>
+
+                        <input type="text" placeholder="Buscá productos...">
+
+                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                    </form>
+
+                    <div class="iconoCarrito">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <div class="contenedorInformacionCarrito">
+                            <span>5</span>
+                            <span>-</span>
+                            <span>$8000,00</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            
-            
-            <ul class="nav-links mobile" id="hola">
+            <ul class="nav-links mobile" id="nav-links-mobile">
                 <li class="li_navLinks"> <a href="index.php"> <h2>Inicio</h2> </a> </li>
-                <li class="li_navLinks"> 
+                <li class="li_navLinks" id="dropdownMenu-responsive"> 
                     <a> <h2>Productos</h2> </a> 
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
 
-                    <!-- <div class="responsiveSub-menu">
+                    <div class="responsiveSub-menu">
                         <div class="dropdownItem"><a href="dos.php">    <h2>Idumentaria</h2>        </a></div>
                         <div class="dropdownItem"><a href="dos.php">    <h2>Calzado</h2>        </a></div>
                         <div class="dropdownItem"><a href="dos.php">    <h2>Acccesorios</h2>        </a></div>
 
-                    </div> -->
-                
+                    </div>
                 </li>
                 <li class="li_navLinks"> <a href="comoComprar.php"> <h2>Como comprar</h2> </a> </li>
                 <li class="li_navLinks"> <a href="contacto.php"> <h2>Contacto</h2> </a> </li>
