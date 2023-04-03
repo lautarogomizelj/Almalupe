@@ -70,11 +70,11 @@
         
         
         
-        <div class="btnVerMasProductos">
+        <button class="btnVerMasProductos">
             <a href="productos.php">
                 Ver más productos
             </a>
-        </div>
+        </button>
 
 
 
@@ -88,9 +88,9 @@
                 <!-- <h3>¡Seguinos en nuestras redes!</h3> -->
                 
                 <div class="contenedor-iconos">
-                    <a href="" class="fa fa-facebook"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063544151286" class="fa fa-facebook"></a>
                     <a href="https://www.instagram.com/almalupee/" class="fa fa-instagram"></a>
-                    <a href="whatsapp:contact=01144279069@s.whatsapp.com&message="I'd like to chat with you" class="fa fa-whatsapp"></a>
+                    <a href="https://wa.me/5491144279069" class="fa fa-whatsapp"></a>
                 </div>
             </div>
         </article>

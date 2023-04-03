@@ -155,7 +155,6 @@
     width: 15rem;
     height: 100%;            
     left: 10vw;
-    outline: 1px solid red;
     display: none;
 }
 
@@ -163,9 +162,8 @@
     position: absolute;
     right: 10vw;
     display: flex;
-    width: 8rem;
+    width: max-content;
     height: 100%;
-    outline: 1px solid red;
     align-items: center;
 }
 
@@ -181,7 +179,6 @@
 }
 
 .contenedor .seccion.arriba .contenedorCarrito a .contenedorInformacionCarrito{
-    outline: 1px solid black;
     width: max-content;
     margin-left: 10px;
 }
@@ -194,6 +191,16 @@
     text-decoration: none;
     font-weight: 700;
 }
+
+/*Contenedor que aparece detallando todo el carrito*/
+
+/* .contenedor .seccion.arriba .contenedorCarrito .contenedorDetalleCarrito{
+    position: absolute;
+    background-color: red;
+    width: 10rem;
+    height: 20rem;
+    right: 0;
+} */
 
 
 

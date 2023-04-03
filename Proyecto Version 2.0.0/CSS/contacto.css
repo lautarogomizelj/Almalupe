@@ -1,0 +1,77 @@
+.contenedorTotal{
+    width: 65%;
+    margin: 3vw auto 0;
+    display: flex;
+    position: relative;
+    font-family: var(--font-family-secundario1);
+    height: 18rem;
+    outline: 1px solid black;
+}
+
+.contenedorTotal .contenedorParte{
+    outline: 1px solid red;
+    height: 100% ;
+    overflow: hidden;
+    position: relative;
+}
+
+/*---------------------------------------------*/
+.contenedorTotal .contenedorParte.izquierda{
+    width: 35%;
+}
+
+.contenedorTotal .contenedorParte.izquierda .contenido{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    margin: 0 auto;
+}
+
+.contenedorTotal .contenedorParte.izquierda .row{
+    outline: 1px solid red;
+    width: 85%;
+    height: 40px;
+}
+
+
+
+
+
+
+/*---------------------------------------------*/
+.contenedorTotal .contenedorParte.derecha{
+    width: 65%;
+}
+
+
+.contenedorTotal .contenedorParte.derecha form input{
+    background: #eef3fa;
+    width: 80%;
+    height: 35px;
+    margin-left: 40px;
+    outline: none;
+    color: #495c6a;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    display: block;
+}
+
+.contenedorTotal .contenedorParte.derecha textarea{
+    width: 80%;
+    background: #eef3fa;
+    border: none;
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-top: 15px;
+    color: #495c6a;
+    margin-left: 40px;
+    outline: none;
+    font-size: 14px;
+    padding-right: 15px;
+    resize: none;
+    display: block;
+    height: 120px;
+}

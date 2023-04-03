@@ -1,0 +1,17 @@
+.contenedorTextoCompra{
+    background-color: lightblue;
+    width: 65%;
+    margin: 3vw auto 0;
+    font-family: var(--font-family-secundario1);
+    padding: 25px;
+}
+
+.contenedorTextoCompra span{
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 78px;
+}
+
+.contenedorTextoCompra ol{
+    margin: 18px 0;
+}
