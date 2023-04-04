@@ -26,6 +26,7 @@
     <!-- <link rel="stylesheet" href="Templates/CSS/template_header.css"> -->
     <link rel="stylesheet" href="Templates/CSS/template_footer.css">
 
+    <link rel="shortcut icon" href="Assets/logoWeb.png">
 
     <title>Almalupe - Inicio</title>
 
@@ -68,44 +69,12 @@
         </article>
         
         
-        
-        
         <button class="btnVerMasProductos">
             <a href="productos.php">
                 Ver más productos
             </a>
         </button>
 
-
-
-        <!----------Empieza publicidad-----------> 
-        <article>
-            <div class="contenedorSubtitulo">
-                <h3>¡Seguinos en nuestras redes sociales!</h3>
-            </div>
-
-            <div class="contenedor-publicidad">
-                <!-- <h3>¡Seguinos en nuestras redes!</h3> -->
-                
-                <div class="contenedor-iconos">
-                    <a href="https://www.facebook.com/profile.php?id=100063544151286" class="fa fa-facebook"></a>
-                    <a href="https://www.instagram.com/almalupee/" class="fa fa-instagram"></a>
-                    <a href="https://wa.me/5491144279069" class="fa fa-whatsapp"></a>
-                </div>
-            </div>
-        </article>
-        <!----------Termina publicidad-----------> 
-    
-    </section>
-
-    <footer>
-        <div class="contenedorNewsletter">
-            <form action="">
-                <input type="text" placeholder="Tu e-mail">
-                <button class="btnSubmit"></button>
-            </form>
-        </div>
-    </footer>
 
     <?php
         include 'Templates/PHP/template_footer.php';

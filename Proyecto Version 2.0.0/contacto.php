@@ -16,9 +16,13 @@
     <link rel="stylesheet" href="Templates/CSS/template_header.css">
     <link rel="stylesheet" href="Templates/CSS/template_header_responsive.css">
 
+    <link rel="stylesheet" href="Templates/CSS/template_footer.css">
+
+
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/contacto.css">
 
+    <link rel="shortcut icon" href="Assets/logoWeb.png">
 
     <title>Almalupe - Contacto</title>
 </head>
@@ -28,30 +32,34 @@
         include 'Templates/PHP/template_header.php';
     ?>
 
+    <div class="contenedorSubtitulo">
+        <h3>¡Contactate con nosotros!</h3>
+    </div>
+
     <div class="contenedorTotal">
         <div class="contenedorParte izquierda">
             <div class="contenido">
-
                 <div class="row uno">
-                    <a href="">
+                    <a href="https://goo.gl/maps/3CRaHnQVn71ZdF7e7">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <span>Juan B Alberdi 4183, Villa Ballester</span>
                     </a>
                 </div>
                 <div class="row dos">
-                    <a href="">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    <a href="https://wa.me/5491144279069">
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
                         <span>+5491156933407</span>
                     </a>
                 </div>
                 <div class="row tres">
-                    <a href="">
+                    <a href="mailto:almalupe2023@gmail.com">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         <span>almalupe2023@gmail.com</span>
                     </a>
                 </div>
             </div>
         </div>
+
         <div class="contenedorParte derecha">
             <form action="" method="POST">
                 <input type="text" name="nombre" placeholder="Tu nombre">
@@ -68,9 +76,13 @@
     </div>
 
 
-
+    <?php
+        include 'Templates/PHP/template_footer.php';
+    ?>
 
 
     <script src="Backend/JS/app.js"></script>
+    <script src="Backend/JS/animacionesIndex.js"></script>
+
 </body>
 </html>

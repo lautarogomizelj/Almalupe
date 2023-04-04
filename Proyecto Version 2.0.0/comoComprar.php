@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/comoComprar.css">
     
+    <link rel="shortcut icon" href="Assets/logoWeb.png">
 
     <title>Almalupe - Como comprar</title>
 </head>
@@ -100,5 +101,6 @@
 
 
     <script src="Backend/JS/app.js"></script>
+    <script src="Backend/JS/animacionesIndex.js"></script>
 </body>
 </html>

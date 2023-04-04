@@ -1,15 +1,13 @@
 .contenedorTotal{
     width: 65%;
-    margin: 3vw auto 0;
+    margin: 2rem auto 10rem ;
     display: flex;
     position: relative;
     font-family: var(--font-family-secundario1);
     height: 18rem;
-    outline: 1px solid black;
 }
 
 .contenedorTotal .contenedorParte{
-    outline: 1px solid red;
     height: 100% ;
     overflow: hidden;
     position: relative;
@@ -21,17 +19,27 @@
 }
 
 .contenedorTotal .contenedorParte.izquierda .contenido{
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-    margin: 0 auto;
+    height: max-content;
+    width: max-content;
+    margin: 10% auto;
 }
 
 .contenedorTotal .contenedorParte.izquierda .row{
-    outline: 1px solid red;
-    width: 85%;
+    width: max-content;
     height: 40px;
+}
+
+.contenedorTotal .contenedorParte.izquierda .row a{
+    text-decoration: none;
+}
+
+.contenedorTotal .contenedorParte.izquierda .row a{
+    font-size: 14px;
+    font-family: var(--font-family-principal);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--text-color);
 }
 
 
@@ -46,7 +54,8 @@
 
 
 .contenedorTotal .contenedorParte.derecha form input{
-    background: #eef3fa;
+    /* background: #eef3fa; */
+    background: #efefef;
     width: 80%;
     height: 35px;
     margin-left: 40px;
@@ -61,7 +70,8 @@
 
 .contenedorTotal .contenedorParte.derecha textarea{
     width: 80%;
-    background: #eef3fa;
+    /* background: #eef3fa; */
+    background: #efefef;
     border: none;
     border-radius: 2px;
     padding-left: 15px;

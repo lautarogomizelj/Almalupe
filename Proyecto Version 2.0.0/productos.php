@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="CSS/main.css">
 
+    <link rel="shortcut icon" href="Assets/logoWeb.png">
+
     <title>Almalupe - Productos</title>
 </head>
 <body>
@@ -32,5 +34,6 @@
 
 
     <script src="Backend/JS/app.js"></script>
+    <script src="Backend/JS/animacionesIndex.js"></script>
 </body>
 </html>
