@@ -16,7 +16,9 @@
 <div class="contenedorNewsletter">
     <form action="">
         <input type="text" placeholder="Tu e-mail">
-        <button class="btnSubmit"></button>
+        <button class="btnSubmit">
+            <span>Suscribite</span>
+        </button>
     </form>
 </div>
 
@@ -50,15 +52,26 @@
 
     <div class="contacto">
         <h4>Contactanos</h4>
+        
         <div class="item-contacto">
-            <span class="material-symbols-outlined">call</span>
-            <p>Horario para retirar compras, de Lun a Sab de 12 a 18hs.</p>
+            <a href="https://goo.gl/maps/3CRaHnQVn71ZdF7e7">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <h5>Juan B Alberdi 4183</h5>
+            </a>
         </div>
+        
         <div class="item-contacto">
-            <span class="material-symbols-outlined">alternate_email</span>
+            <a href="https://wa.me/5491144279069">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <h5>+5491156933407</h5>
+            </a>
         </div>
+
         <div class="item-contacto">
-            <span class="material-symbols-outlined">location_on</span>
+            <a href="mailto:almalupe2023@gmail.com">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <h5>almalupe2023@gmail.com</h5>
+            </a>
         </div>
     </div>
 </div>

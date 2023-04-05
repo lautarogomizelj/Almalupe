@@ -42,19 +42,19 @@
                 <div class="row uno">
                     <a href="https://goo.gl/maps/3CRaHnQVn71ZdF7e7">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <span>Juan B Alberdi 4183, Villa Ballester</span>
+                        <h5>Juan B Alberdi 4183</h5>
                     </a>
                 </div>
                 <div class="row dos">
                     <a href="https://wa.me/5491144279069">
                         <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                        <span>+5491156933407</span>
+                        <h5>+5491156933407</h5>
                     </a>
                 </div>
                 <div class="row tres">
                     <a href="mailto:almalupe2023@gmail.com">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <span>almalupe2023@gmail.com</span>
+                        <h5>almalupe2023@gmail.com</h5>
                     </a>
                 </div>
             </div>

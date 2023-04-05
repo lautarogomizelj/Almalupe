@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="Templates/CSS/template_header.css">
     <link rel="stylesheet" href="Templates/CSS/template_header_responsive.css">
 
+    <link rel="stylesheet" href="Templates/CSS/template_footer.css">
+
     <link rel="stylesheet" href="CSS/main.css">
 
     <link rel="shortcut icon" href="Assets/logoWeb.png">
@@ -26,11 +28,13 @@
     
     <?php
         include 'Templates/PHP/template_header.php';
-    
     ?>
 
 
 
+    <?php
+        include 'Templates/PHP/template_footer.php';
+    ?>
 
 
     <script src="Backend/JS/app.js"></script>

@@ -49,17 +49,22 @@
 /*---------------------------------------------------------------------------------------*/
 
 .contenedorNewsletter{
-    background-color: var(--div-background-color);
-    width: 25rem;
+    width: 27rem;
     height: 2rem;
     margin: 3rem auto;
     display: flex;
-    outline: 1px solid red;
+    position: relative;
 }
+
+.contenedorNewsletter form{
+    display: flex;
+    width: 100%;
+}
+
 
 .contenedorNewsletter input{
     background-color: #F4F4F4;
-    width: 100%;
+    width: 60%;
     height: 100%;
     outline: none;
     border: none;
@@ -73,6 +78,69 @@
     transition: all 200ms;
 }
 
+.contenedorNewsletter .btnSubmit{
+    height: 100%;
+    width: 40%;
+    border: none;
+    background: var(--div-background-color);
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.contenedorNewsletter .btnSubmit:hover{
+    background: #fff;
+    border: 1px solid var(--text-color);
+}
+
+.contenedorNewsletter .btnSubmit:hover span{
+    color: var( --text-color);
+}
+
+
+
+.contenedorNewsletter .btnSubmit span{
+    font-family: var(--font-family-principal);
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms;
+}
+
+@media screen and (max-width: 680px) {
+    .contenedor-publicidad{
+        width: 100%;
+    }
+
+    /*----------------------*/
+
+    .contenedorNewsletter{
+        width: 100%;
+        height: max-content;
+    }
+
+    .contenedorNewsletter form{
+        display: block;
+        text-align: center;
+    }
+
+    .contenedorNewsletter input{
+        margin: 0 auto;
+        width: 80%;
+        height: 2.5rem;
+    }
+
+    .contenedorNewsletter .btnSubmit{
+        margin: 20px auto 0;
+        height: 2.5rem;
+
+    }
+
+    
+    
+}
+
 /*---------------------------------------------------------------------------------------*/
 
 .footer-container{
@@ -81,7 +149,7 @@
     font-family: var(--font-family-principal);
     margin: 40px auto 0;
     padding: 10px 5px;
-    width: 65%;
+    width: 100%;
     display: flex;
     gap: 50px;
     flex-direction: row;
@@ -92,11 +160,6 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
-}
-
-.footer-container h4{
-    font-weight: 600;
-    font-size: 17px;
 }
 
 .navegacion ul{
@@ -127,10 +190,25 @@
     gap: 10px;
 }
 
-@media screen and (max-width: 800px){
+.item-contacto a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.item-contacto a:hover{
+    text-decoration: underline;
+}
+
+.item-contacto a h5{
+    color: whitesmoke;
+}
+
+
+@media screen and (max-width: 750px){
     .footer-container{
-        padding: 10px;
+        padding: 20px;
         flex-direction: column;
+        margin: 0 auto;
     }
 
     .img-container{

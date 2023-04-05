@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="Templates/CSS/template_header.css">
     <link rel="stylesheet" href="Templates/CSS/template_header_responsive.css">
 
+    <link rel="stylesheet" href="Templates/CSS/template_footer.css">
+
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/comoComprar.css">
     
@@ -97,7 +99,9 @@
     </div>
 
 
-
+    <?php
+        include 'Templates/PHP/template_footer.php';
+    ?>
 
 
     <script src="Backend/JS/app.js"></script>
