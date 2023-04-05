@@ -88,6 +88,12 @@
 </head>
 <body>
 
+    <?php 
+        echo "sdlfsdklfsd";
+        echo $consulta_productos;
+
+    ?>
+
     <?php include 'Templates/nav.php'; ?>   
 
     <div class="row-1">
@@ -125,7 +131,7 @@
                 <th class="row"><?php echo $row['stock'];?></th>
                 <th class="row"><?php if ($row['destacado'] == 1) {echo "Si";} else {echo "No";} ?></th>
                 <th class="row"><?php echo $row['categoria'];?></th>
-                <th class="row"><img src="../Assets/Productos/<?php echo $row['nombre_archivo'];?>" alt="as"></th>
+                <th class="row"><img src="../Assets/<?php echo $row['nombre_archivo'];?>" alt="as"></th>
                 <th class="row">
                     <!-- <a href="" class="txt" id="agregar">
                         <i class="fas fa-plus"></i>

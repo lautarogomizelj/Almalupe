@@ -1,5 +1,7 @@
 <?php
+    include 'db.php';
     $paginaActual = "index.php";
+    
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +49,22 @@
         <!-- <article>
             <div class="contenedorSubtitulo">
                 <h2>Categorías destacadas</h2>
+            </div>
+        </article> -->
+
+        <!-- <article>           
+            <div class="contenedorSubtitulo">
+                <h3>Productos destacados</h3>
+            </div>
+            
+            <div class="contenedorGrid">
+            <?php 
+                // $consultaProductos = "SELECT * FROM productos WHERE destacado = 1;";
+                // $resultadoProductos = mysqli_query($conex, $consultaProductos);
+                // while ($row_Productos = mysqli_fetch_assoc($resultadoProductos)){
+                //     include 'Templates/PHP/template_producto_copy.php';
+                // }
+            ?>
             </div>
         </article> -->
 

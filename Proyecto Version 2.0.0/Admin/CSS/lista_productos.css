@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+body{
+    background: var(--div-background-color1);
+    /* font-family: 'Roboto', monospace; */
+}
+
+:root{
+    --div-background-color1: #ededed;
+    --div-background-color2: #b6b3b3;
+    --div-font-family1: 'Roboto', monospace;
+    --div-font-family2: 'Source Sans Pro', sans-serif;
+}
+/*--------------------------------------*/
+
+.row-1{
+    /* background: violet; */
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 2vw;
+    height: 3rem;
+    font-family: var(--div-font-family2);
+}
+
+.row-1 .contenedor-1{
+    /* background: yellow; */
+    /* display: block; */
+    height: 100%;
+    width: max-content;
+    display: inline-flex;
+}
+
+.row-1 .contenedor-1 .fas{
+    font-size: 26px;
+    color: black;
+    padding-top: 8px;
+}
+
+.row-1 .contenedor-1 span{
+    color: black;
+    font-size: 30px;
+    margin-left: 5px;
+    padding-top: 1px;
+    font-weight: 600;
+}
+
+.row-1 .contenedor-2{
+    /* background: red; */
+    display: inline-flex;
+    margin-left: 50px;
+}
+
+.row-1 .contenedor-2 button{
+    background: rgb(24, 164, 168);
+    border: none;
+    outline: none;
+    /* border: 1px solid rgb(0, 0, 255); */
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+.row-1 .contenedor-2 .fas{
+    font-size: 18px;
+    color: white;
+}
+
+.row-1 .contenedor-2 button span{
+    font-size: 18px;
+    color: white;
+}
+
+
+
+
+
+/*---------------*/
+
+table{
+    font-family: var(--div-font-family1);
+    width: 60vw;
+    margin: 1vw auto;
+    border: none;
+    border-collapse: collapse;
+}
+
+.sub{
+    /* background: red; */
+    height: 2.5rem;
+}
+
+.row{
+    height: 5rem;
+}
+
+.row img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+tr:nth-child(odd){
+    background: var(--div-background-color2);
+}
+
+tr:nth-child(even){
+    background: var(--div-background-color1);
+}
+
+.titulo{
+    background: rgb(50, 137, 195) !important;
+    color: white;
+}
+
+
+.txt{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+#agregar{
+    color: rgb(33, 204, 85);
+}
+
+#editar{
+    color: rgb(38, 116, 168);
+}
+
+#eliminar{
+    color: rgb(202, 69, 64);
+}
+
+/*---------------*/
+
+option{
+    display: inline-flex;
+    cursor: pointer;
+}
+
+button{
+    background: transparent;
+    margin: 0;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#bien{
+    color: black;
+}

@@ -10,11 +10,6 @@
         $usuario = $_POST['usuario'];
         $contrasena = $_POST['contrasena'];
 
-        $contra = md5("admin1");
-
-        $consulta = "INSERT INTO usuarios (username, password1) VALUES ('admin', '$contra')";
-        $resul = mysqli_query($conex, $consulta);
-
         $usuario = mysqli_real_escape_string($conex, trim($_POST['usuario']));
         $contrasena = mysqli_real_escape_string($conex, trim($_POST['contrasena']));
 
@@ -51,12 +46,15 @@
                         $extraido_Usuario = mysqli_fetch_assoc($resuladoConsultaUsuario);
 
                         if ($extraido_Usuario['username'] == $usuario && $extraido_Usuario['password1'] == $contrasenamd5){
-                            echo "puede ingresar";
-
                             $consulta_conexion  = "UPDATE usuarios SET ult_conexion = '$ultimaConexion' WHERE username = '$usuario' AND password1 = '$contrasenamd5'";
                             $resultado_conexion = mysqli_query($conex, $consulta_conexion);
-                            
-                            header('Location: ../../index.php');
+
+                            if ($extraido_Usuario['rol_id'] == "777"){
+                                header('Location: ../../Admin/lista_productos.php');
+                            }
+                            else{
+                                header('Location: ../../index.php');
+                            }
                         }
                         else{
                             echo "Hubo un error en el inicio de sesion...";
