@@ -90,6 +90,7 @@ dropdownMenuResponsiveButton.addEventListener("click", function(){
 
 
 const iconoBusquedaCarrito = document.getElementById("iconoBusquedaCarrito")
+const iconoCerrarBusquedaCarrito = iconoBusquedaCarrito.nextElementSibling.nextElementSibling
 const formulario = iconoBusquedaCarrito.parentElement
 
 const inputBusquedaForm = formulario.childNodes[3]
@@ -102,6 +103,18 @@ iconoBusquedaCarrito.addEventListener("click", function(){
     formulario.classList.toggle("claseMoverFormulario")
     inputBusquedaForm.classList.toggle("activo12")
     iconoCerrarFormulario.classList.toggle("activo12")
+
+    iconoBusquedaCarrito.classList.toggle("claseIconoActivo")
+})
+
+iconoCerrarBusquedaCarrito.addEventListener("click", function(){
+    btnMenu.classList.toggle("desaparece")
+
+    formulario.classList.toggle("claseMoverFormulario")
+    inputBusquedaForm.classList.toggle("activo12")
+    iconoCerrarFormulario.classList.toggle("activo12")
+
+    iconoBusquedaCarrito.classList.toggle("claseIconoActivo")
 
 })
 

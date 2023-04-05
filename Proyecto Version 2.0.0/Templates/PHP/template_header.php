@@ -64,7 +64,7 @@
             </div>
         </div>
         
-        <form action="">
+        <form action="" method="POST">
             <div class="contenedorBuscador">
                 <input type="text" placeholder="Buscá entre tantos productos...">
                 
@@ -123,7 +123,7 @@
             
             
             <div class="sub derecha">
-                <form action="">
+                <form action="" method="POST">
                     <i class="fa fa-search" aria-hidden="true" id="iconoBusquedaCarrito"></i>
 
                     <input type="text" placeholder="Buscá productos...">
