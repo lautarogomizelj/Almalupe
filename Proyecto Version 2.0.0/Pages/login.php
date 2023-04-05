@@ -57,7 +57,7 @@
             </div>
 
             <div class="row-2">
-                <p>No tenes una cuenta?</p> <a href="signup.html">Registrate.</a>
+                <p>No tenes una cuenta?</p> <a href="signup.php">Registrate.</a>
             </div>
         </form>
 

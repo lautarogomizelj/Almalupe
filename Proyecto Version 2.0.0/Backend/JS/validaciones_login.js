@@ -167,10 +167,10 @@ function submit1(){
 
 const form = document.getElementById('myForm1');
 
-// form.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     
-//     if (submit1() == true){
+    if (submit1() == true){
         
-//         e.preventDefault();
-//     }
-// })
+        e.preventDefault();
+    }
+})

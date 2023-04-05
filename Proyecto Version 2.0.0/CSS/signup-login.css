@@ -33,9 +33,10 @@ body{
 }
 
 #contenedor_signup{
-    height: 920px;
+    height: 700px;
     width: 500px;
-    margin: 20px auto;
+    margin: 8% auto;
+
 }
 
 #contenedor_login{
