@@ -1,5 +1,4 @@
 .contenedorTextoCompra{
-    background-color: lightblue;
     width: 65%;
     margin: 3vw auto 0;
     font-family: var(--font-family-secundario1);
@@ -14,4 +13,24 @@
 
 .contenedorTextoCompra ol{
     margin: 18px 0;
+}
+
+.contenedorTextoCompra ul{
+    margin-left: 20px;
+}
+
+.contenedorTextoCompra li{
+    margin: 3px;
+}
+
+@media screen and (max-width: 800px){
+    .contenedorTextoCompra{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contenedorTextoCompra{
+        width: 95%;
+    }
 }
