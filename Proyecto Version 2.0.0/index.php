@@ -1,7 +1,7 @@
 <?php
     include 'db.php';
+    session_start();
     $paginaActual = "index.php";
-    
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +52,7 @@
             </div>
         </article> -->
 
-        <!-- <article>           
+        <article>           
             <div class="contenedorSubtitulo">
                 <h3>Productos destacados</h3>
             </div>
@@ -60,31 +60,33 @@
             <div class="contenedorGrid">
             <?php 
                 // $consultaProductos = "SELECT * FROM productos WHERE destacado = 1;";
-                // $resultadoProductos = mysqli_query($conex, $consultaProductos);
-                // while ($row_Productos = mysqli_fetch_assoc($resultadoProductos)){
-                //     include 'Templates/PHP/template_producto_copy.php';
-                // }
+                $consultaProductos = "SELECT * FROM productos;";
+
+                $resultadoProductos = mysqli_query($conex, $consultaProductos);
+                while ($row_Productos = mysqli_fetch_assoc($resultadoProductos)){
+                    include 'Templates/PHP/template_producto_copy.php';
+                }
             ?>
             </div>
-        </article> -->
+        </article>
 
 
-        <article>           
+        <!-- <article>           
             <div class="contenedorSubtitulo">
                 <h3>Productos destacados</h3>
             </div>
             
             <div class="contenedorGrid">
                 <?php 
-                    include 'Templates/PHP/template_producto.php';
-                    include 'Templates/PHP/template_producto.php';
-                    include 'Templates/PHP/template_producto.php';
-                    include 'Templates/PHP/template_producto.php';
-                    include 'Templates/PHP/template_producto.php';
-                    include 'Templates/PHP/template_producto.php';
+                    // include 'Templates/PHP/template_producto.php';
+                    // include 'Templates/PHP/template_producto.php';
+                    // include 'Templates/PHP/template_producto.php';
+                    // include 'Templates/PHP/template_producto.php';
+                    // include 'Templates/PHP/template_producto.php';
+                    // include 'Templates/PHP/template_producto.php';
                 ?>
             </div>
-        </article>
+        </article> -->
         
         
         <button class="btnVerMasProductos">
@@ -99,6 +101,7 @@
     ?>
     
     
+    <script src="Backend/JS/jquery-3.7.0.min.js"></script>
     <script src="Backend/JS/app.js"></script>
     <script src="Backend/JS/animacionesIndex.js"></script>
 </body>

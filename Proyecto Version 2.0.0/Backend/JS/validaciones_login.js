@@ -168,9 +168,8 @@ function submit1(){
 const form = document.getElementById('myForm1');
 
 form.addEventListener('submit', (e) => {
-    
     if (submit1() == true){
-        
-        e.preventDefault();
+        // form.action = '../Backend/PHP/validacion_login.php';
+		
     }
 })

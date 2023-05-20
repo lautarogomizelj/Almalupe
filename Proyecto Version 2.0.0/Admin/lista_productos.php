@@ -25,6 +25,9 @@
 </head>
 <body>
 
+    <a href="../index.php">volver</a>
+    <p>lkjafsljdlfk</p>
+    <h1>lksdjf</h1>
     <!-- <?php //include 'Templates/nav.php'; ?>    -->
 
     <div class="row-1">
@@ -62,7 +65,7 @@
                 <th class="row"><?php echo $row['stock'];?></th>
                 <th class="row"><?php if ($row['destacado'] == 1) {echo "Si";} else {echo "No";} ?></th>
                 <th class="row"><?php echo $row['categoria'];?></th>
-                <th class="row"><img src="../Assets/<?php echo $row['nombre_archivo'];?>" alt="as"></th>
+                <th class="row"><img src="../Assets/Productos/<?php echo $row['nombre_archivo'];?>" alt="as"></th>
                 <th class="row">
                     <a href="Frontend/editar_producto.php?n=<?php echo $row['id_producto']; ?>" class="txt" id="editar">
                         <i class="far fa-edit"></i>

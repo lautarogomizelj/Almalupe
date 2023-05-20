@@ -73,6 +73,7 @@
                         {
                             echo "mal2";
                             echo "</br>";  
+                            echo $filepath;
 
                             // $_SESSION['mensaje_backend_producto'] = "*Archivo ya existente, por favor ingrese otro";
                             // header('Location: ../Frontend/agregar_productos.php');
@@ -89,15 +90,16 @@
 
                             if ($resultado)
                             {
+                                echo "sdlkfjdslkfjsdlkfjsdklfj";
                                 move_uploaded_file($temp, $filepath);
                                 
-                                // $_SESSION['mensaje_backend_producto'] = "Producto agregado";
-                                header('Location: ../Frontend/agregar_productos.php');
-                            }
-                            else
-                            {
-                                // $_SESSION['mensaje_backend_producto'] = "*Algo salio mal";
-                                // header('Location: ../Frontend/agregar_productos.php');
+                        //         // $_SESSION['mensaje_backend_producto'] = "Producto agregado";
+                        //         header('Location: ../Frontend/agregar_productos.php');
+                        //     }
+                        //     else
+                        //     {
+                        //         // $_SESSION['mensaje_backend_producto'] = "*Algo salio mal";
+                        //         // header('Location: ../Frontend/agregar_productos.php');
                             }
                         }
 

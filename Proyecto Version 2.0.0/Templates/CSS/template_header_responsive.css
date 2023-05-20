@@ -11,6 +11,10 @@
         transform: translate(-50%, -50%);
         margin-left: 0;
     }
+
+    
+
+
 }
 
 @media screen and (max-width: 600px){   
@@ -68,6 +72,10 @@
 
     .contenedor .seccion.abajo .contenedorMenuOpciones{
         display: flex;
+    }
+
+    .contenedorDetalleCarrito{
+        /* width: 100% !important; */
     }
 
 }

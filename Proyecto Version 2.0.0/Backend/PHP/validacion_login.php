@@ -1,11 +1,12 @@
 <?php 
 
     include '../../db.php';
+    session_start();
 
     date_default_timezone_set("America/Argentina/Buenos_Aires");
     $ultimaConexion =  date("d/m/Y H:i:s");
 
-
+    echo "skldjf";
     if (isset($_POST['register'])){
         $usuario = $_POST['usuario'];
         $contrasena = $_POST['contrasena'];
@@ -49,32 +50,44 @@
                             $consulta_conexion  = "UPDATE usuarios SET ult_conexion = '$ultimaConexion' WHERE username = '$usuario' AND password1 = '$contrasenamd5'";
                             $resultado_conexion = mysqli_query($conex, $consulta_conexion);
 
-                            if ($extraido_Usuario['rol_id'] == "777"){
-                                header('Location: ../../Admin/lista_productos.php');
-                            }
-                            else{
-                                header('Location: ../../index.php');
-                            }
+                            $_SESSION['username'] = $extraido_Usuario['username'];
+                            $_SESSION['rol_id'] = $extraido_Usuario['rol_id'];
+
+                            header('Location: ../../index.php');
+                            // if ($extraido_Usuario['rol_id'] == "5"){
+                            //     header('Location: ../../Admin/lista_productos.php');
+                            // }
+                            // else{
+                            //     header('Location: ../../index.php');
+                            // }
                         }
                         else{
-                            echo "Hubo un error en el inicio de sesion...";
+        					$_SESSION['mensaje_login'] = "*Hubo un error en el inicio de sesion...";
+
                             header('Location: ../../Pages/login.php');
                         }
                     }
                     else{
-                        echo "Hubo un error en la consulta...";
+        				$_SESSION['mensaje_login'] = "*Hubo un error en el inicio de sesion...";
                         header('Location: ../../Pages/login.php');
                     }                    
                 }
                 else{
-                    echo "Hubo un error en el inicio de sesion...";
+                    $_SESSION['mensaje_login'] = "*Hubo un error en el inicio de sesion...";
                     header('Location: ../../Pages/login.php');
                 }
             }
             else{
-                echo "Hubo un error en la consulta...";
+                $_SESSION['mensaje_login'] = "*Hubo un error en el inicio de sesion...";
                 header('Location: ../../Pages/login.php');
             }
         }
+    }
+    else{
+        echo "h";
+        // header("HTTP/1.1 401 Unauthorized");
+        header("HTTP/1.0 404 Not Found");
+        exit;
+        // header('Location: ../../Pages/login.php');
     }
 ?>

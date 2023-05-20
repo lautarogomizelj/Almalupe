@@ -13,42 +13,101 @@
         Hasta 12 cuotas
     </span>
 </div>
-    
+
+<div class="contenedorDetalleCarrito">
+    <div class="row-1">
+        <h2>Carrito de Compra</h2>
+        <button id="botonCerrar">cerrar</button>
+
+    </div>
+
+</div>
+
 <div class="contenedor">    
-    <div class="seccion arriba">
-        <div class="contenedorSesion">
+    <div class="seccion arriba">    
+        <?php 
+            if (!isset($_SESSION['username']))
+            {
+        ?>
+                <div class="contenedorSesion opciones">
+                    <div class="izq">
+                        <a href="Pages/login.php">
+                            <span>Iniciar Sesion</span>
+                        </a>
+                    </div>
 
-            <div class="izq">
-                <a href="Pages/login.php">
-                    <span>Iniciar Sesion</span>
-                </a>
-            </div>
+                    <div class="der">
+                        <a href="Pages/signup.php">
+                            <span>Registrate</span>
+                        </a>
+                    </div>
+                </div>
+        <?php
+            }
+            else
+            {
+                $usuario = $_SESSION['username'];
+        ?>
+                <div class="contenedorSesion login">
 
-            <div class="der">
-                <a href="Pages/signup.php">
-                    <span>Registrate</span>
-                </a>
-            </div>
-        </div>
+                    <div class="usuario">
+                        <a href="" class="titulo_usuario">
+                            <span> <?php echo $usuario; ?> </span>
+                        </a>
+
+                        <div class="sub-menu">
+                            <div class="dropdownItem">
+                                <a href="" class="">
+                                    <span>Mi cuenta</span>
+                                </a>
+                            </div>
+
+                                
+                            <div class="dropdownItem">
+                                <a href="Backend/PHP/cerrarSesion.php">
+                                    <span>Cerrar Sesion</span>
+                                </a>
+                            </div>
+
+
+                            <?php 
+                                if ($_SESSION['rol_id'] == 5){
+                            ?>
+
+                            <div class="dropdownItem">
+                                <a href="Admin/lista_productos.php">
+                                    <span>cosa de admin</span>
+                                </a>
+                            </div>
+
+                            <?php
+                                }
+                            ?>
+                        </div>
+                    </div>
+
+                </div>
+            
+                <!-- <a href="Backend/PHP/cerrarSesion.php">Cerrar Sesion</a> -->
+        <?php
+            }
+        ?>
+        
         
         <!-- <div class="nombreMariana">
             <h3>by Mariana Paniagua</h3>
         </div> -->
-        
-        <div class="contenedorCarrito">
-            <a href="">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                
-                <div class="contenedorInformacionCarrito">
-                    <span>0</span>
-                    <span>-</span>
-                    <span>$0,00</span>
-                </div>
-            </a>
-
-            <div class="contenedorDetalleCarrito">
-                
+         
+        <div id="carrito" class="contenedorCarrito computer">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            
+            <div class="contenedorInformacionCarrito">
+                <span>0</span>
+                <span>-</span>
+                <span>$0,00</span>
             </div>
+
+            
         </div>
     </div>
     
@@ -131,14 +190,30 @@
                     <i class="fa fa-times-circle-o" aria-hidden="true"></i>
                 </form>
 
-                <div class="iconoCarrito">
+
+                
+
+                <!-- <div class="iconoCarrito">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <div class="contenedorInformacionCarrito">
                         <span>5</span>
                         <span>-</span>
                         <span>$8000,00</span>
                     </div>
+                </div> -->
+
+                <div id="carrito" class="contenedorCarrito mobile">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    
+                    <div class="contenedorInformacionCarrito">
+                        <span>0</span>
+                        <span>-</span>
+                        <span>$0,00</span>
+                    </div>
                 </div>
+
+
+
             </div>
         </div>
         

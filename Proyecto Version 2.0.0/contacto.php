@@ -1,4 +1,5 @@
 <?php
+
     $paginaActual = "contacto.php";
 ?>
 
@@ -67,7 +68,7 @@
                 <textarea name="mensaje" placeholder="Mensaje"></textarea>
 
                 <button class="btnVerMasProductos">
-                    <a href="productos.php">
+                    <a href="">
                         Enviar
                     </a>
                 </button>

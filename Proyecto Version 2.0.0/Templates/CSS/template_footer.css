@@ -176,7 +176,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 300px;
-    gap: 5px;
+    gap: 8px;
 }
 
 .mediosDePago img{

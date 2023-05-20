@@ -119,6 +119,53 @@ iconoCerrarBusquedaCarrito.addEventListener("click", function(){
 })
 
 
+/*--------------------------------------------------------------*/
+let contenedorCarritoComputer = document.querySelectorAll(".contenedorCarrito")[0]
+let contenedorCarritoMobile = document.querySelectorAll(".contenedorCarrito")[1]
+
+let contenedorDetalleCarrito = document.querySelector(".contenedorDetalleCarrito")
+let botonCerrar = document.getElementById("botonCerrar")
+
+
+$(document).ready(function(){
+    // codigo para abrir/cerrar el popup del carrito
+    // ----------------------------------------------------------------
+    $(contenedorCarritoComputer).click(function(){
+        $(contenedorDetalleCarrito).animate({
+            width: "500px"
+        });
+    })
+
+    $(contenedorCarritoMobile).click(function(){
+        $(contenedorDetalleCarrito).animate({
+            width: "100%"
+        }, 500);
+    })
+
+    $(botonCerrar).click(function(){
+        $(contenedorDetalleCarrito).animate({
+            width: "0"
+        });
+    })
+
+    
+
+    $(document).click(function(e){
+        if (contenedorDetalleCarrito.style.width == "500px"){
+            if (!contenedorDetalleCarrito.contains(e.target)){
+                $(contenedorDetalleCarrito).animate({
+                    width: "0"
+                });
+            }
+        }
+    })
+    // ----------------------------------------------------------------
+
+
+
+
+});
+
 
 
 
@@ -127,7 +174,7 @@ iconoCerrarBusquedaCarrito.addEventListener("click", function(){
 // window.onload = () => {
 //     getScreenWidth
 //     document.querySelectorAll('body > *:not(.pop-up-container)')
-//         .forEach(x => x.style.filter = 'blur(5px)')
+//         .forEach(x => x.style.filter = 'blur(1px)')
 //     document.querySelectorAll('.pop-up-container')[0].style.display = 'block'
 // }
 
