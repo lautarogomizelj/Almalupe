@@ -1,4 +1,6 @@
 <?php
+    include 'db.php';
+    session_start();
     $paginaActual = "comoComprar.php";
 ?>
 
@@ -103,7 +105,7 @@
         include 'Templates/PHP/template_footer.php';
     ?>
 
-
+    <script src="Backend/JS/jquery-3.7.0.min.js"></script>
     <script src="Backend/JS/app.js"></script>
     <script src="Backend/JS/animacionesIndex.js"></script>
 </body>

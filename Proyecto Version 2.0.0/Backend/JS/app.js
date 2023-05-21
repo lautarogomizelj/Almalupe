@@ -44,6 +44,9 @@ document.getElementById("logoAlmalupe").addEventListener("click", function(){
 });
 
 
+/*--------------------------------------------------------------*/
+
+
 const btnMenu = document.getElementById("btnMenuResponsive")
 const menu = document.getElementById("nav-links-mobile")
 /*------*/
@@ -53,40 +56,100 @@ const iconDropdown1 = dropdownMenuResponsiveButton.childNodes[3]
 
 const hijonum3 = menu.childNodes[5]
 
-btnMenu.addEventListener("click", function(){
-    menu.classList.toggle("active")
-    document.body.classList.toggle("opacity")
-    document.body.classList.toggle("no-scroll")
+let todoLi = document.querySelectorAll(".li_navLinks.mobile")
 
-    contenedorDropdownResponsive.classList.remove("active1")
-    hijonum3.style.margin = "0"
-    iconDropdown1.style.transform = "rotate(0)"
-});
+console.log(todoLi)
 
-document.onclick = function(e){
-    if(!btnMenu.contains(e.target) && !menu.contains(e.target)){
-        menu.classList.remove("active")
-        document.body.classList.remove("opacity")
-        document.body.classList.remove("no-scroll")
-
-        contenedorDropdownResponsive.classList.remove("active1")
-        hijonum3.style.margin = "0"
-        iconDropdown1.style.transform = "rotate(0)"
-    }
-}
-
-dropdownMenuResponsiveButton.addEventListener("click", function(){
-    contenedorDropdownResponsive.classList.toggle("active1")
+$(document).ready(function(){
     
-    if (contenedorDropdownResponsive.classList.contains("active1")){
-        hijonum3.style.margin = `${contenedorDropdownResponsive.offsetHeight}px 0 0 0`;
-        iconDropdown1.style.transform = "rotate(-90deg)"
-    }
-    else{
-        hijonum3.style.margin = "0"
-        iconDropdown1.style.transform = "rotate(0)"
-    }
+    $(btnMenu).click(function(e){
+        $(menu).animate({
+            width: "240px"
+        })
+
+        // $('body').toggleClass('opacity');
+        // $(".body").toggleClass("no-scroll");
+
+    })
+
+
+    $(document).click(function(e){
+        if (menu.style.width == "240px"){
+            if (!menu.contains(e.target)){
+                $(menu).animate({
+                    width: "0"
+                });
+
+                todoLi.forEach(elementoLi => {
+                    let hijos = elementoLi.childNodes
+                    
+                    hijos.forEach(hijo => {
+                        if(hijo.classList == "sub-nav-links"){
+                            if(hijo.style.height == "100%"){
+                                $(hijo).animate({
+                                    height: "0",
+                                    opacity: "0"
+                                })
+                            }
+                        }
+                    });
+                });
+
+                // $('body').toggleClass('opacity');
+                // $(".body").toggleClass("no-scroll");
+            }
+
+            // todoLi.forEach(elementoLi => {
+            //     if (elementoLi.contains(e.target)){
+            //         let hijos = elementoLi.childNodes
+
+            //         hijos.forEach(hijo => {
+            //             if(hijo.classList == "sub-nav-links"){
+            //                 if
+            //                 $(hijo).animate({
+            //                     height: "100%",
+            //                     opacity: "1"
+            //                 });
+            //             }
+            //         });
+            //     }
+            // });
+
+            todoLi.forEach(elementoLi => {
+                if (elementoLi.contains(e.target)) {
+                  let hijos = elementoLi.childNodes;
+              
+                  hijos.forEach(hijo => {
+                    if (hijo.classList == "sub-nav-links") {
+                        console.log(hijo.style.height)
+                      if (hijo.style.height == "" || hijo.style.height == "0px" ) {
+                        // Child elements are hidden, animate to show
+                        $(hijo).animate({
+                          height: "100%",
+                          opacity: "1"
+                        });
+                      } else {
+                        // Child elements are visible, animate to hide
+                        $(hijo).animate({
+                          height: "0",
+                          opacity: "0"
+                        });
+                      }
+                    }
+                  });
+                }
+              });
+
+        }
+    })
+
+
 });
+
+
+
+/*--------------------------------------------------------------*/
+
 
 
 const iconoBusquedaCarrito = document.getElementById("iconoBusquedaCarrito")
@@ -115,7 +178,6 @@ iconoCerrarBusquedaCarrito.addEventListener("click", function(){
     iconoCerrarFormulario.classList.toggle("activo12")
 
     iconoBusquedaCarrito.classList.toggle("claseIconoActivo")
-
 })
 
 
@@ -160,10 +222,6 @@ $(document).ready(function(){
         }
     })
     // ----------------------------------------------------------------
-
-
-
-
 });
 
 

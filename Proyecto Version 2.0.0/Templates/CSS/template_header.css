@@ -476,6 +476,7 @@
 
 .contenedor .seccion.abajo .nav-links .li_navLinks .sub-menu .dropdownItem{
     height: 40px;
+    display: flex;
     width: 188px;
 }
 
@@ -501,19 +502,10 @@
     opacity: 0;
     transition: all .5s;
     position: absolute;
-    top: 0;
     left: 188px;
     display: none;
 }
 
-.contenedor .seccion.abajo .nav-links .li_navLinks .sub-menu .dropdownItem .subsub-menu .dropdownItem2{
-    height: 40px;
-    width: 188px;
-}
-
-.contenedor .seccion.abajo .nav-links .li_navLinks .sub-menu .dropdownItem .subsub-menu .dropdownItem2:hover{
-    background-color: #efefef;
-}
 
 
 
@@ -525,6 +517,7 @@
     height: 100%;
     display: none;
     justify-content: space-between;
+    position: relative;
 }
 
 
@@ -683,11 +676,13 @@
 
 .contenedor .seccion.abajo .nav-links.mobile{
     background-color: #ffffff;
+    display: flex !important;
     flex-direction: column;
     height: max-content;
-    transform: translatex(-240px);
+    /* width: 240px; */
+    overflow: hidden;
+    width: 0;
     box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.2);
-
 
     position: absolute;
     top: 55px;
@@ -695,17 +690,23 @@
     bottom: 0;
     transition: all .5s;
 }
+.contenedor .seccion.abajo .nav-links.mobile a{
+    pointer-events: none;
+}
 
 .contenedor .seccion.abajo .nav-links.mobile .li_navLinks{
-    width: max-content;
-    width: 12.5rem;
+    width: 100%;
+    position: relative;
+}
+
+.contenedor .seccion.abajo .nav-links.mobile .li_navLinks a{
     height: 50px;
 }
 
 .contenedor .seccion.abajo .nav-links.mobile .li_navLinks i{
     position: absolute;
-    top: 14px;
-    right: 11px;
+    top: 15px;
+    right: 15px;
     font-size: 19px;
     color: var(--text-color);
 }
@@ -722,24 +723,19 @@
 }
 
 
-/*Estilo para subttitulo secundarios (responsiveSub-menu)*/
+/* *--------------------------------------------------------------- */
 
-.contenedor .seccion.abajo .nav-links.mobile .li_navLinks .responsiveSub-menu{
-    background: #fff;
-    transition: all .5s;
+.contenedor .seccion.abajo .sub-nav-links{
+    position: relative;
+    height: 0;
+    /* height: 100%; */
     opacity: 0;
-    width: 75%;
-    margin-left: 25%;    
+    /* height: max-content; */
+    margin-left: 10%;
 }
 
 
-.contenedor .seccion.abajo .nav-links.mobile .li_navLinks .responsiveSub-menu .dropdownItem{
-    width: 9.5rem;
-    height: 50px;
-}
-.contenedor .seccion.abajo .nav-links.mobile .li_navLinks .responsiveSub-menu .dropdownItem a{
-    padding: 0;
-}
+
 
 .active1{
     opacity: 1 !important;

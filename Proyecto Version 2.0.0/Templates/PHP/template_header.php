@@ -61,7 +61,6 @@
                                     <span>Mi cuenta</span>
                                 </a>
                             </div>
-
                                 
                             <div class="dropdownItem">
                                 <a href="Backend/PHP/cerrarSesion.php">
@@ -69,13 +68,12 @@
                                 </a>
                             </div>
 
-
                             <?php 
                                 if ($_SESSION['rol_id'] == 5){
                             ?>
 
                             <div class="dropdownItem">
-                                <a href="Admin/lista_productos.php">
+                                <a href="Admin/panel_administracion.html">
                                     <span>cosa de admin</span>
                                 </a>
                             </div>
@@ -85,7 +83,6 @@
                             ?>
                         </div>
                     </div>
-
                 </div>
             
                 <!-- <a href="Backend/PHP/cerrarSesion.php">Cerrar Sesion</a> -->
@@ -140,30 +137,43 @@
             <h1>A</h1>
         </div>
         
+        <?php
+        
+            function mostrarCategoriasComputer($parentid){
+                $consultaCategoriaPadre = "SELECT * FROM categorias WHERE parent_id = $parentid";
+                $resultadoConsultaCategoriaPadre = mysqli_query($GLOBALS['conex'], $consultaCategoriaPadre);
+
+                if ($parentid == 0){
+                    $output = "<div class='sub-menu'>\n";
+                }
+                else{
+                    $output = "<div class='subsub-menu'>\n";
+                }
+            
+                
+                while ($row = mysqli_fetch_array($resultadoConsultaCategoriaPadre)){
+                    
+                    $output .= "<div class='dropdownItem'>  <a href='".$row['name']."'>  <h2>".$row['name']."</h2>  </a>";
+                    $output .= mostrarCategoriasComputer($row['id']);
+                    $output .= "</div>";
+                }
+
+                $output .= "</div>\n";
+
+                return $output;
+            }
+        ?>
+
+
         <ul class="nav-links">
             <li class="li_navLinks"> <a href="index.php" <?php if ($paginaActual == "index.php"){ ?> class="subtituloActivo" <?php } ?> ><h2>Inicio</h2> </a> </li>
             <li class="li_navLinks"> 
                 <a href="productos.php" <?php if ($paginaActual == "productos.php"){ ?> class="subtituloActivo" <?php } ?> > <h2>Productos</h2> </a> 
-                <div class="sub-menu">
-                    <div class="dropdownItem">
-                        <a href="uno.php"> <h2>Idumentaria</h2> </a>
-                        
-                        <div class="subsub-menu">
-                            <div class="dropdownItem2"><a href="s.php">    <h2>Sale</h2>        </a></div>
-                            <div class="dropdownItem2"><a href="dos.php">    <h2>Remeras</h2>     </a></div>
-                            <div class="dropdownItem2"><a href="dos.php">    <h2>Camperas</h2>     </a></div>
-                            <div class="dropdownItem2"><a href="dos.php">    <h2>Pantalones</h2>     </a></div>
-                        </div>
 
-                    </div>
-                    <div class="dropdownItem"><a href="dos.php">    <h2>Calzado</h2>        </a></div>
-                    <div class="dropdownItem"><a href="tres.php">   <h2>Accesorios</h2>     </a></div>
-                    <div class="dropdownItem"><a href="cuatro.php"> <h2>Vestidos</h2>       </a></div>
-                    <div class="dropdownItem"><a href="cuatro.php"> <h2>Poleron</h2>        </a></div>
-                    <div class="dropdownItem"><a href="cuatro.php"> <h2>Sacos abiertos</h2> </a></div>
-                    <div class="dropdownItem"><a href="cuatro.php"> <h2>Enteritos</h2>      </a></div>
-                </div>
-            </li>
+                <?php 
+                    echo mostrarCategoriasComputer(0);
+                ?>
+
             <li class="li_navLinks"> <a href="comoComprar.php" <?php if ($paginaActual == "comoComprar.php"){ ?> class="subtituloActivo" <?php } ?> > <h2>Como comprar</h2> </a> </li>
             <li class="li_navLinks"> <a href="contacto.php" <?php if ($paginaActual == "contacto.php"){ ?> class="subtituloActivo" <?php } ?> > <h2>Contacto</h2> </a> </li>                
         </ul>
@@ -191,8 +201,6 @@
                 </form>
 
 
-                
-
                 <!-- <div class="iconoCarrito">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     <div class="contenedorInformacionCarrito">
@@ -211,27 +219,48 @@
                         <span>$0,00</span>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
+
+
+
+
+        <?php
+        
+            function mostrarCategoriasMobile($parentid){
+                $consultaCategoriaPadre = "SELECT * FROM categorias WHERE parent_id = $parentid";
+                $resultadoConsultaCategoriaPadre = mysqli_query($GLOBALS['conex'], $consultaCategoriaPadre);
+
+                $output = "<ul class='sub-nav-links'>\n";
+                
+                while ($row = mysqli_fetch_array($resultadoConsultaCategoriaPadre)){
+                    
+                    $output .= "<li class='li_navLinks mobile'> <a href=''> <h2>".$row['name']."</h2> </a>";
+                    $output .= mostrarCategoriasMobile($row['id']);
+                    $output .= "</li>";
+                }
+
+                $output .= "</ul>\n";
+
+                return $output;
+            }
+        ?>
+
         
         <ul class="nav-links mobile" id="nav-links-mobile">
-            <li class="li_navLinks"> <a href="index.php"> <h2>Inicio</h2> </a> </li>
-            <li class="li_navLinks" id="dropdownMenu-responsive"> 
+            <li class="li_navLinks mobile"> <a href="index.php"> <h2>Inicio</h2> </a> </li>
+
+            <li class="li_navLinks sub mobile" id="dropdownMenu-responsive"> 
                 <a> <h2>Productos</h2> </a> 
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
 
-                <div class="responsiveSub-menu">
-                    <div class="dropdownItem"><a href="dos.php">    <h2>Idumentaria</h2>        </a></div>
-                    <div class="dropdownItem"><a href="dos.php">    <h2>Calzado</h2>        </a></div>
-                    <div class="dropdownItem"><a href="dos.php">    <h2>Acccesorios</h2>        </a></div>
-
-                </div>
+                <?php
+                    echo mostrarCategoriasMobile(0);
+                ?>
             </li>
-            <li class="li_navLinks"> <a href="comoComprar.php"> <h2>Como comprar</h2> </a> </li>
-            <li class="li_navLinks"> <a href="contacto.php"> <h2>Contacto</h2> </a> </li>
+
+            <li class="li_navLinks mobile"> <a href="comoComprar.php"> <h2>Como comprar</h2> </a> </li>
+            <li class="li_navLinks mobile"> <a href="contacto.php"> <h2>Contacto</h2> </a> </li>
         </ul>       
     </div>
 </div>
